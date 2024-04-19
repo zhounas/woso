@@ -1,0 +1,221 @@
+@prefix woso: <https://purl.org/woso#> .
+@prefix saref: <https://saref.etsi.org/core/> .
+@prefix skos: <https://saref.etsi.org/core/> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dct:  <http://purl.org/dc/terms/>.
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#>.
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+
+woso: a owl:Ontology ;
+    owl:imports <https://labs.etsi.org/rep/saref/saref-core/-/raw/develop-v3.2.1/ontology/saref.ttl> ; # this is the latest version of SAREF Core V3.2.1.
+    owl:versionInfo "v0.1" ;
+    owl:versionIRI <https://purl.org/woso/0.1#> ;
+    dcterms:issued "2024-02-02"^^xsd:date ;
+    dcterms:title "Web of Simulations ontology."@en ;
+    dcterms:license <https://creativecommons.org/licenses/by/3.0/> ;
+    dcterms:creator <https://www.linkedin.com/in/zehor-thilleli-hounas/> ;
+    dcterms:creator <http://maxime-lefrancois.info/me#> ;
+    dcterms:creator <http://w3id.org/people/az/me> ;
+    vann:preferredNamespacePrefix "woso" ;
+    vann:preferredNamespaceUri "https://purl.org/woso#" ;
+    dcterms:description "The Web Of Simulations ontology (WoSO) is a high-level ontology that describes Building Performance Simulations and their interaction with IoT systems. WoSO extends the SAREF V3.2.1 reference IoT ontology to include simulations as a component of IoT systems."@en .
+
+### Simulation Model
+
+woso:SimulationModel a owl:Class ;
+    rdfs:comment "Use of a data processing system to represent selected behavioral characteristics of a physical or abstract system (source: ISO/IEC 2382-1:1993(en), 01.06.01)"@en ;
+    rdfs:label "simulation model"@en .
+
+
+woso:models a owl:ObjectProperty ;
+    rdfs:label "models"@en ;
+    rdfs:comment "Links a simulation model to the feature of interest it models."@en ;
+    rdfs:domain woso:SimulationModel ;
+    rdfs:range saref:FeatureOfInterest ;
+    owl:inverseOf woso:isModeledBy .
+
+woso:isModeledBy a owl:ObjectProperty ;
+    rdfs:label "is modeled by"@en ;
+    rdfs:comment "Links a feature of interest to the simulation model that models it."@en ;
+    rdfs:domain saref:FeatureOfInterest ;
+    rdfs:range woso:SimulationModel ;
+    owl:inverseOf woso:models .
+
+
+woso:isRelatedToProperty a owl:ObjectProperty ;
+    rdfs:label "is related to property"@en ;
+    rdfs:domain woso:SimulationModel ;
+    rdfs:range saref:Property .
+
+### Function and Service
+
+woso:PredictingFunction a owl:Class ;
+        rdfs:subClassOf saref:Function ;
+    rdfs:label "predicting function"@en .
+
+woso:PredictionService a owl:Class ;
+    rdfs:subClassOf saref:Service ;
+    rdfs:label "prediction service"@en .
+
+
+### Metadata on simulation models
+
+# Adapted from  https://fmi-standard.org/docs/3.0/#table-schema-fmiModelDescription-attributes
+
+# 
+woso:format a owl:DatatypeProperty ;
+    rdfs:label "format"@en ;
+    rdfs:comment "The format of the simulation [for example fmu]."@en ;
+    rdfs:domain woso:SimulationModel ;
+    rdfs:range xsd:string .
+
+# corresponds to #modelName
+woso:formatVersion a owl:DatatypeProperty ;
+    rdfs:label "format version"@en ;
+    rdfs:comment "The format version of the simulation [for example 3.0]."@en ;
+    rdfs:domain woso:SimulationModel ;
+    rdfs:range xsd:string .
+
+# modelName: use rdfs:label
+
+# instantiationToken: too FMI-specific, not modeled in WOSO
+
+# description, use rdfs:comment
+
+# author
+woso:author a owl:DatatypeProperty ;
+    rdfs:label "author"@en ;
+    rdfs:comment "Optional string with the name of the model author."@en ;
+    rdfs:domain woso:SimulationModel ;
+    rdfs:range xsd:string .
+
+# version
+woso:version a owl:DatatypeProperty ;
+    rdfs:label "version"@en ;
+    rdfs:comment "Optional version of the simulation model [for example 1.0]."@en ;
+    rdfs:domain woso:SimulationModel ;
+    rdfs:range xsd:string .
+
+# copyright
+woso:copyright a owl:DatatypeProperty ;
+    rdfs:label "copyright"@en ;
+    rdfs:comment "Optional information on the intellectual property copyright for this simulation model [for example © My Company 2022]."@en ;
+    rdfs:domain woso:SimulationModel ;
+    rdfs:range xsd:string .
+
+# license
+woso:license a owl:DatatypeProperty ;
+    rdfs:label "license"@en ;
+    rdfs:comment "Optional information on the intellectual property licensing for this simulation model. [For example BSD license <license text or link to license>. If more space is required, the folder licenses should be used.]"@en ;
+    rdfs:domain woso:SimulationModel ;
+    rdfs:range xsd:string .
+
+# generationTool
+woso:generationTool a owl:DatatypeProperty ;
+    rdfs:label "generation tool"@en ;
+    rdfs:comment "Optional name of the tool that generated the simulation model."@en ;
+    rdfs:domain woso:SimulationModel ;
+    rdfs:range xsd:string .
+
+# generationDateAndTime
+woso:generationDateAndTime a owl:DatatypeProperty ;
+    rdfs:label "generation date and time"@en ;
+    rdfs:comment "Optional date and time when the simulation model was generated."@en ;
+    rdfs:domain woso:SimulationModel ;
+    rdfs:range xsd:dateTime .
+
+
+### Variables of simulation models
+# Adapted from the description of model variables in FMI 3.0 https://fmi-standard.org/docs/3.0/#ModelVariables
+
+woso:hasInputDescription a owl:DatatypeProperty ;
+    rdfs:label "has input description"@en ;
+    rdfs:domain woso:SimulationModel ;
+    rdfs:range xsd:string .
+
+woso:hasOutputDescription a owl:DatatypeProperty ;
+    rdfs:label "has output description"@en ;
+    rdfs:domain woso:SimulationModel ;
+    rdfs:range xsd:string .
+
+woso:hasParameterDescription a owl:DatatypeProperty ;
+    rdfs:label "has parameter description"@en ;
+    rdfs:domain woso:SimulationModel ;
+    rdfs:range xsd:string .
+
+
+### Simulation
+
+woso:Simulation a owl:Class ;
+    rdfs:subClassOf saref:ProcedureExecution ;
+    rdfs:comment "Calculation method that describes a system or process related to a physical or abstract system (adapted from ISO 13943:2023(en), 3.160)"@en ;
+    rdfs:label "simulation"@en ;
+    rdfs:subClassOf [
+        owl:onProperty saref:isExecutionOf ;
+        owl:allValuesFrom woso:SimulationModel ] ;
+    rdfs:subClassOf [
+        owl:onProperty saref:hasInput ;
+        owl:allValuesFrom woso:SimulationVariable ] ;
+    rdfs:subClassOf [
+        owl:onProperty saref:hasOutput ;
+        owl:allValuesFrom woso:SimulationVariable ] ;
+    rdfs:subClassOf [
+        owl:onProperty saref:hasParameter ;
+        owl:allValuesFrom woso:SimulationVariable ] .
+    
+woso:hasParameter a owl:ObjectProperty ;
+    rdfs:label "has parameter"@en ;
+    rdfs:comment "Links a simulation to one of its parameters."@en ;
+    rdfs:domain woso:Simulation ;
+    rdfs:range woso:SimulationVariable .
+
+
+# use saref:madeBy from SAREF from SAREF V3.2.1
+# use saref:madeExecution from SAREF V3.2.1
+# use saref:hasFunction from SAREF V3.2.1
+# use saref:offers from SAREF V3.2.1
+# use saref:isOfferedBy from SAREF V3.2.1
+# use saref:hasInput from SAREF V3.2.1
+# use saref:hasOutput from SAREF V3.2.1
+
+### Simulation Variable
+
+woso:SimulationVariable a owl:Class ;
+    rdfs:label "simulation variable"@en ;
+    rdfs:comment "Simulations use variables to exchange information. Variables may be scalar or multi-dimensional arrays."@en .
+
+woso:hasValue a owl:DatatypeProperty ;
+    rdfs:label "has value"@en ;
+    rdfs:domain woso:SimulationVariable ;
+    rdfs:comment "Value of a simulation variable expressed as an RDF literal."@en .
+
+woso:hasUnit a owl:ObjectProperty ;
+    rdfs:label "has unit"@en ;
+    rdfs:domain woso:SimulationVariable ;
+    rdfs:range saref:UnitOfMeasurement ;
+    rdfs:comment "A relationship identifying the unit of measure used for a simulation variable."@en .
+
+
+### Metadata on simulations
+
+# can use saref:hasResultTime from SAREF V3.2.1
+# can use saref:hasTimestamp from SAREF V3.2.1
+
+woso:hasExecutionStartTime a owl:DatatypeProperty ;
+    rdfs:label "has execution start time"@en ;
+    rdfs:domain woso:Simulation ;
+    rdfs:range xsd:dateTime .
+    
+woso:hasExecutionEndTime a owl:DatatypeProperty ;
+    rdfs:label "has execution end time"@en ;
+    rdfs:domain woso:Simulation ;
+    rdfs:range xsd:dateTime .
+
+woso:hasExecutionDuration a owl:DatatypeProperty ;
+    rdfs:label "has execution duration"@en ;
+    rdfs:domain woso:Simulation ;
+    rdfs:range xsd:duration .
+

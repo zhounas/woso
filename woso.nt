@@ -1,0 +1,234 @@
+<https://purl.org/woso#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://purl.org/woso#> <http://www.w3.org/2002/07/owl#versionIRI> <https://purl.org/woso/0.1#> .
+<https://purl.org/woso#> <http://www.w3.org/2002/07/owl#imports> <https://labs.etsi.org/rep/saref/saref-core/-/raw/develop-v3.2.1/ontology/saref.ttl> .
+<https://purl.org/woso#> <http://purl.org/dc/terms/creator> <http://maxime-lefrancois.info/me#> .
+<https://purl.org/woso#> <http://purl.org/dc/terms/creator> <http://w3id.org/people/az/me> .
+<https://purl.org/woso#> <http://purl.org/dc/terms/creator> <https://www.linkedin.com/in/zehor-thilleli-hounas/> .
+<https://purl.org/woso#> <http://purl.org/dc/terms/description> "The Web Of Simulations ontology (WoSO) is a high-level ontology that describes Building Performance Simulations and their interaction with IoT systems. WoSO extends the SAREF V3.2.1 reference IoT ontology to include simulations as a component of IoT systems."@en .
+<https://purl.org/woso#> <http://purl.org/dc/terms/issued> "2024-02-02"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://purl.org/woso#> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/3.0/> .
+<https://purl.org/woso#> <http://purl.org/dc/terms/title> "Web of Simulations ontology."@en .
+<https://purl.org/woso#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "woso" .
+<https://purl.org/woso#> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://purl.org/woso#" .
+<https://purl.org/woso#> <http://www.w3.org/2002/07/owl#versionInfo> "v0.1" .
+# 
+# 
+# #################################################################
+# #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2001/XMLSchema#duration
+<http://www.w3.org/2001/XMLSchema#duration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# https://purl.org/woso#hasParameter
+<https://purl.org/woso#hasParameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://purl.org/woso#hasParameter> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/woso#Simulation> .
+<https://purl.org/woso#hasParameter> <http://www.w3.org/2000/01/rdf-schema#range> <https://purl.org/woso#SimulationVariable> .
+<https://purl.org/woso#hasParameter> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a simulation to one of its parameters."@en .
+<https://purl.org/woso#hasParameter> <http://www.w3.org/2000/01/rdf-schema#label> "has parameter"@en .
+# 
+# https://purl.org/woso#hasUnit
+<https://purl.org/woso#hasUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://purl.org/woso#hasUnit> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/woso#SimulationVariable> .
+<https://purl.org/woso#hasUnit> <http://www.w3.org/2000/01/rdf-schema#range> <https://saref.etsi.org/core/UnitOfMeasurement> .
+<https://saref.etsi.org/core/UnitOfMeasurement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://purl.org/woso#hasUnit> <http://www.w3.org/2000/01/rdf-schema#comment> "A relationship identifying the unit of measure used for a simulation variable."@en .
+<https://purl.org/woso#hasUnit> <http://www.w3.org/2000/01/rdf-schema#label> "has unit"@en .
+# 
+# https://purl.org/woso#isModeledBy
+<https://purl.org/woso#isModeledBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://purl.org/woso#isModeledBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://saref.etsi.org/core/FeatureOfInterest> .
+<https://purl.org/woso#isModeledBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://purl.org/woso#SimulationModel> .
+<https://purl.org/woso#isModeledBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a feature of interest to the simulation model that models it."@en .
+<https://purl.org/woso#isModeledBy> <http://www.w3.org/2000/01/rdf-schema#label> "is modeled by"@en .
+# 
+# https://purl.org/woso#isRelatedToProperty
+<https://purl.org/woso#isRelatedToProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://purl.org/woso#isRelatedToProperty> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/woso#SimulationModel> .
+<https://purl.org/woso#isRelatedToProperty> <http://www.w3.org/2000/01/rdf-schema#range> <https://saref.etsi.org/core/Property> .
+<https://purl.org/woso#isRelatedToProperty> <http://www.w3.org/2000/01/rdf-schema#label> "is related to property"@en .
+# 
+# https://purl.org/woso#models
+<https://purl.org/woso#models> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://purl.org/woso#models> <http://www.w3.org/2002/07/owl#inverseOf> <https://purl.org/woso#isModeledBy> .
+<https://purl.org/woso#models> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/woso#SimulationModel> .
+<https://purl.org/woso#models> <http://www.w3.org/2000/01/rdf-schema#range> <https://saref.etsi.org/core/FeatureOfInterest> .
+<https://purl.org/woso#models> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a simulation model to the feature of interest it models."@en .
+<https://purl.org/woso#models> <http://www.w3.org/2000/01/rdf-schema#label> "models"@en .
+# 
+# https://saref.etsi.org/core/hasParameter
+<https://saref.etsi.org/core/hasParameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# https://purl.org/woso#author
+<https://purl.org/woso#author> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://purl.org/woso#author> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/woso#SimulationModel> .
+<https://purl.org/woso#author> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://purl.org/woso#author> <http://www.w3.org/2000/01/rdf-schema#comment> "Optional string with the name of the model author."@en .
+<https://purl.org/woso#author> <http://www.w3.org/2000/01/rdf-schema#label> "author"@en .
+# 
+# https://purl.org/woso#copyright
+<https://purl.org/woso#copyright> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://purl.org/woso#copyright> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/woso#SimulationModel> .
+<https://purl.org/woso#copyright> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://purl.org/woso#copyright> <http://www.w3.org/2000/01/rdf-schema#comment> "Optional information on the intellectual property copyright for this simulation model [for example © My Company 2022]."@en .
+<https://purl.org/woso#copyright> <http://www.w3.org/2000/01/rdf-schema#label> "copyright"@en .
+# 
+# https://purl.org/woso#format
+<https://purl.org/woso#format> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://purl.org/woso#format> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/woso#SimulationModel> .
+<https://purl.org/woso#format> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://purl.org/woso#format> <http://www.w3.org/2000/01/rdf-schema#comment> "The format of the simulation [for example fmu]."@en .
+<https://purl.org/woso#format> <http://www.w3.org/2000/01/rdf-schema#label> "format"@en .
+# 
+# https://purl.org/woso#formatVersion
+<https://purl.org/woso#formatVersion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://purl.org/woso#formatVersion> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/woso#SimulationModel> .
+<https://purl.org/woso#formatVersion> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://purl.org/woso#formatVersion> <http://www.w3.org/2000/01/rdf-schema#comment> "The format version of the simulation [for example 3.0]."@en .
+<https://purl.org/woso#formatVersion> <http://www.w3.org/2000/01/rdf-schema#label> "format version"@en .
+# 
+# https://purl.org/woso#generationDateAndTime
+<https://purl.org/woso#generationDateAndTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://purl.org/woso#generationDateAndTime> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/woso#SimulationModel> .
+<https://purl.org/woso#generationDateAndTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://purl.org/woso#generationDateAndTime> <http://www.w3.org/2000/01/rdf-schema#comment> "Optional date and time when the simulation model was generated."@en .
+<https://purl.org/woso#generationDateAndTime> <http://www.w3.org/2000/01/rdf-schema#label> "generation date and time"@en .
+# 
+# https://purl.org/woso#generationTool
+<https://purl.org/woso#generationTool> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://purl.org/woso#generationTool> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/woso#SimulationModel> .
+<https://purl.org/woso#generationTool> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://purl.org/woso#generationTool> <http://www.w3.org/2000/01/rdf-schema#comment> "Optional name of the tool that generated the simulation model."@en .
+<https://purl.org/woso#generationTool> <http://www.w3.org/2000/01/rdf-schema#label> "generation tool"@en .
+# 
+# https://purl.org/woso#hasExecutionDuration
+<https://purl.org/woso#hasExecutionDuration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://purl.org/woso#hasExecutionDuration> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/woso#Simulation> .
+<https://purl.org/woso#hasExecutionDuration> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#duration> .
+<https://purl.org/woso#hasExecutionDuration> <http://www.w3.org/2000/01/rdf-schema#label> "has execution duration"@en .
+# 
+# https://purl.org/woso#hasExecutionEndTime
+<https://purl.org/woso#hasExecutionEndTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://purl.org/woso#hasExecutionEndTime> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/woso#Simulation> .
+<https://purl.org/woso#hasExecutionEndTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://purl.org/woso#hasExecutionEndTime> <http://www.w3.org/2000/01/rdf-schema#label> "has execution end time"@en .
+# 
+# https://purl.org/woso#hasExecutionStartTime
+<https://purl.org/woso#hasExecutionStartTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://purl.org/woso#hasExecutionStartTime> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/woso#Simulation> .
+<https://purl.org/woso#hasExecutionStartTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://purl.org/woso#hasExecutionStartTime> <http://www.w3.org/2000/01/rdf-schema#label> "has execution start time"@en .
+# 
+# https://purl.org/woso#hasInputDescription
+<https://purl.org/woso#hasInputDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://purl.org/woso#hasInputDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/woso#SimulationModel> .
+<https://purl.org/woso#hasInputDescription> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://purl.org/woso#hasInputDescription> <http://www.w3.org/2000/01/rdf-schema#label> "has input description"@en .
+# 
+# https://purl.org/woso#hasOutputDescription
+<https://purl.org/woso#hasOutputDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://purl.org/woso#hasOutputDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/woso#SimulationModel> .
+<https://purl.org/woso#hasOutputDescription> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://purl.org/woso#hasOutputDescription> <http://www.w3.org/2000/01/rdf-schema#label> "has output description"@en .
+# 
+# https://purl.org/woso#hasParameterDescription
+<https://purl.org/woso#hasParameterDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://purl.org/woso#hasParameterDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/woso#SimulationModel> .
+<https://purl.org/woso#hasParameterDescription> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://purl.org/woso#hasParameterDescription> <http://www.w3.org/2000/01/rdf-schema#label> "has parameter description"@en .
+# 
+# https://purl.org/woso#hasValue
+<https://purl.org/woso#hasValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://purl.org/woso#hasValue> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/woso#SimulationVariable> .
+<https://purl.org/woso#hasValue> <http://www.w3.org/2000/01/rdf-schema#comment> "Value of a simulation variable expressed as an RDF literal."@en .
+<https://purl.org/woso#hasValue> <http://www.w3.org/2000/01/rdf-schema#label> "has value"@en .
+# 
+# https://purl.org/woso#license
+<https://purl.org/woso#license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://purl.org/woso#license> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/woso#SimulationModel> .
+<https://purl.org/woso#license> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://purl.org/woso#license> <http://www.w3.org/2000/01/rdf-schema#comment> "Optional information on the intellectual property licensing for this simulation model. [For example BSD license <license text or link to license>. If more space is required, the folder licenses should be used.]"@en .
+<https://purl.org/woso#license> <http://www.w3.org/2000/01/rdf-schema#label> "license"@en .
+# 
+# https://purl.org/woso#version
+<https://purl.org/woso#version> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://purl.org/woso#version> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/woso#SimulationModel> .
+<https://purl.org/woso#version> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://purl.org/woso#version> <http://www.w3.org/2000/01/rdf-schema#comment> "Optional version of the simulation model [for example 1.0]."@en .
+<https://purl.org/woso#version> <http://www.w3.org/2000/01/rdf-schema#label> "version"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# https://purl.org/woso#PredictingFunction
+<https://purl.org/woso#PredictingFunction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://purl.org/woso#PredictingFunction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://saref.etsi.org/core/Function> .
+<https://purl.org/woso#PredictingFunction> <http://www.w3.org/2000/01/rdf-schema#label> "predicting function"@en .
+# 
+# https://purl.org/woso#PredictionService
+<https://purl.org/woso#PredictionService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://purl.org/woso#PredictionService> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://saref.etsi.org/core/Service> .
+<https://purl.org/woso#PredictionService> <http://www.w3.org/2000/01/rdf-schema#label> "prediction service"@en .
+# 
+# https://purl.org/woso#Simulation
+<https://purl.org/woso#Simulation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://purl.org/woso#Simulation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://saref.etsi.org/core/ProcedureExecution> .
+<https://purl.org/woso#Simulation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://purl.org/woso#SimulationVariable> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <https://saref.etsi.org/core/hasInput> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://purl.org/woso#Simulation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
+_:genid2 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://purl.org/woso#SimulationVariable> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <https://saref.etsi.org/core/hasOutput> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://purl.org/woso#Simulation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
+_:genid3 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://purl.org/woso#SimulationVariable> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <https://saref.etsi.org/core/hasParameter> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://purl.org/woso#Simulation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
+_:genid4 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://purl.org/woso#SimulationModel> .
+_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <https://saref.etsi.org/core/isExecutionOf> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://purl.org/woso#Simulation> <http://www.w3.org/2000/01/rdf-schema#comment> "Calculation method that describes a system or process related to a physical or abstract system (adapted from ISO 13943:2023(en), 3.160)"@en .
+<https://purl.org/woso#Simulation> <http://www.w3.org/2000/01/rdf-schema#label> "simulation"@en .
+# 
+# https://purl.org/woso#SimulationModel
+<https://purl.org/woso#SimulationModel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://purl.org/woso#SimulationModel> <http://www.w3.org/2000/01/rdf-schema#comment> "Use of a data processing system to represent selected behavioral characteristics of a physical or abstract system (source: ISO/IEC 2382-1:1993(en), 01.06.01)"@en .
+<https://purl.org/woso#SimulationModel> <http://www.w3.org/2000/01/rdf-schema#label> "simulation model"@en .
+# 
+# https://purl.org/woso#SimulationVariable
+<https://purl.org/woso#SimulationVariable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://purl.org/woso#SimulationVariable> <http://www.w3.org/2000/01/rdf-schema#comment> "Simulations use variables to exchange information. Variables may be scalar or multi-dimensional arrays."@en .
+<https://purl.org/woso#SimulationVariable> <http://www.w3.org/2000/01/rdf-schema#label> "simulation variable"@en .
+# 
+# https://saref.etsi.org/core/UnitOfMeasurement
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

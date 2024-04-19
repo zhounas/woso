@@ -1,0 +1,15 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix : <> .
+<https://purl.org/woso/0.1#> a prov:Entity;
+	 dc:title "Web of Simulations ontology.";
+	 prov:wasAttributedTo <https://www.linkedin.com/in/zehor-thilleli-hounas/>;
+	 dc:creator <https://www.linkedin.com/in/zehor-thilleli-hounas/>;
+	 prov:wasAttributedTo <http://maxime-lefrancois.info/me#>;
+	 dc:creator <http://maxime-lefrancois.info/me#>;
+	 prov:wasAttributedTo <http://w3id.org/people/az/me>;
+	 dc:creator <http://w3id.org/people/az/me>;
+	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;
+	 prov:wasGeneratedAt "2024-02-01";
+.
