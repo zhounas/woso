@@ -1,0 +1,4 @@
+# Which function the simulations accomplishes?
+PREFIX saref: <https://saref.etsi.org/core/>
+PREFIX woso: <https://purl.org/woso#>
+SELECT * WHERE { ?s saref:hasFunction ?fn }

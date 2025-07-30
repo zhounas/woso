@@ -1,0 +1,7 @@
+# What tool was the simulation model generated with, and when?
+PREFIX saref: <https://saref.etsi.org/core/>
+PREFIX woso: <https://purl.org/woso#>
+SELECT ?m ?gt ?gdt WHERE { 
+    $m woso:generationTool ?gt .
+    $m woso:generationDateAndTime ?gdt
+}

@@ -1,0 +1,56 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix saref: <https://saref.etsi.org/core/> .
+@prefix woso: <https://purl.org/woso#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+
+@base <https://example.org/> .
+
+<Office123> a saref:FeatureOfInterest ;
+	rdfs:label "Office 123"@en .
+
+<Thermostat> a saref:Device ;
+	rdfs:label "Thermostat"@en .
+
+<CurrentTemperature> a woso:SimulationVariable ;
+	rdfs:label "Current Temperature"@en .
+
+<DayTimeTemperatureSetPoint> a woso:SimulationVariable ;
+	rdfs:label "Day time Temperature Set Point"@en .
+
+<NightTimeTemperatureSetPoint> a woso:SimulationVariable ;
+	rdfs:label "Night Time Temperature Set Point"@en .
+
+<HeaterState> a woso:SimulationVariable ;
+	rdfs:label "Heater State"@en .
+				 
+<SimulationStep> a woso:SimulationVariable ;
+	rdfs:label "Simulation Step"@en .
+
+<HeaterStatePrediction> a saref:Function ;
+	rdfs:label "Heater State Prediction"@en .
+
+<HeatingControlPrediction> a woso:PredictionService ;
+	rdfs:label "Heating Control Prediction"@en .
+
+<ThermalModel> a woso:SimulationModel ;
+	rdfs:label "Thermal Model"@en ;
+	woso:format "FMU" ;
+	woso:generationTool "OMEdit" ;
+	woso:generationDateAndTime "2024-02-20T12:00:00Z"^^xsd:dateTime ;
+	woso:isRelatedToProperty <Temperature> ;
+	woso:models <Office123> .
+
+<ThermalSimulation> a woso:Simulation ;
+	rdfs:label "Thermal Simulation"@en ;
+	woso:isExecutionOf <ThermalModel> ;
+	saref:hasInput <CurrentTemperature> ,
+		<DayTimeTemperatureSetPoint> ,
+		<NightTimeTemperatureSetPoint> ;
+	saref:hasOutput <HeaterState> ;
+	woso:hasParameter <SimulationStep> ;
+	saref:offers <PredictionService> ;
+	saref:hasFunction <HeaterStatePrediction> ;
+	saref:madeBy <Thermostat> ;
+	woso:hasExecutionStartTime "2024-02-20T12:01:00Z"^^xsd:dateTime ;
+    woso:hasExecutionEndTime "2024-02-20T12:02:00Z"^^xsd:dateTime ;
+    woso:hasExecutionDuration "PT1M"^^xsd:duration .

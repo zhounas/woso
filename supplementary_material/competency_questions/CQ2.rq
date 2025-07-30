@@ -1,0 +1,6 @@
+# What are the inputs, outputs, and parameters, of the simulation?
+PREFIX saref: <https://saref.etsi.org/core/>
+PREFIX woso: <https://purl.org/woso#>
+SELECT ?p ?q WHERE {
+    ?s ?p ?q
+} VALUES ?p { saref:hasInput saref:hasOutput woso:hasParameter }

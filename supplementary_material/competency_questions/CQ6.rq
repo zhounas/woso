@@ -1,0 +1,4 @@
+# Which features of interest are represented by the simulation model execution?
+PREFIX saref: <https://saref.etsi.org/core/>
+PREFIX woso: <https://purl.org/woso#>
+SELECT * WHERE { ?m woso:models ?f}

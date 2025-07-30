@@ -1,0 +1,4 @@
+# Which services the simulations offers?
+PREFIX saref: <https://saref.etsi.org/core/>
+PREFIX woso: <https://purl.org/woso#>
+SELECT * WHERE { ?s saref:offers ?srv }

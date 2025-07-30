@@ -1,0 +1,4 @@
+# What is the format of the model?
+PREFIX saref: <https://saref.etsi.org/core/>
+PREFIX woso: <https://purl.org/woso#>
+SELECT * WHERE { $m woso:format ?f }

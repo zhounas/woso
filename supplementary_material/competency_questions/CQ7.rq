@@ -1,0 +1,4 @@
+# What device made the execution of the simulations?
+PREFIX saref: <https://saref.etsi.org/core/>
+PREFIX woso: <https://purl.org/woso#>
+SELECT * WHERE { ?d saref:madeExecution|^saref:madeBy ?s }
