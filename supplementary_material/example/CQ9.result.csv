@@ -1,2 +1,6 @@
-s,fn
-https://example.org/ThermalSimulation,https://example.org/HeaterStatePrediction
+n
+Current Temperature
+Day time Temperature Set Point
+Simulation Step
+Heater State
+Night Time Temperature Set Point

@@ -1,2 +1,4 @@
-s,srv
-https://example.org/ThermalSimulation,https://example.org/PredictionService
+sv,value
+http://example.org/ScenarioA#CurrentTemperature,20.29
+http://example.org/ScenarioA#DayTimeTemperatureSetPoint,20.00
+http://example.org/ScenarioA#NightTimeTemperatureSetPoint,19.00

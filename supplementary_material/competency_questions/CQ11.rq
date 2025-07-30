@@ -1,0 +1,12 @@
+# What is the value of the output variable on the second simulation step?
+PREFIX woso: <https://purl.org/woso#>
+SELECT ?sv ?value
+    WHERE {
+        ?s woso:hasOutput ?sv .
+        ?svv woso:isValueOfVariable ?sv ;
+             woso:hasSimulationTime ?step ;
+             woso:hasValue ?value .
+    }
+    ORDER BY ?step
+    LIMIT 1
+    OFFSET 1

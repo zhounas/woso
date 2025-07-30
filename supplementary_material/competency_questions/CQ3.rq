@@ -1,8 +1,8 @@
-# what are the start time, end time, and duration, of the simulation?
-PREFIX saref: <https://saref.etsi.org/core/>
+# What are the start time, end time, and duration of the simulation?
 PREFIX woso: <https://purl.org/woso#>
-SELECT ?s ?st ?et ?d WHERE {
-    ?s woso:hasExecutionStartTime ?st.
-    ?s woso:hasExecutionEndTime ?et.
-    ?s woso:hasExecutionDuration ?d
-}
+SELECT ?st ?et ?d
+    WHERE {
+        ?s woso:hasExecutionStartTime ?st .
+        ?s woso:hasExecutionEndTime ?et .
+        ?s woso:hasExecutionTime ?d .
+    }

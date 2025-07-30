@@ -1,0 +1,3 @@
+# Which services does the simulation offer?
+PREFIX woso: <https://purl.org/woso#>
+SELECT ?srv WHERE { ?s woso:offers ?srv }

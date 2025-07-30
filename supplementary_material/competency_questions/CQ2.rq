@@ -1,6 +1,3 @@
-# What are the inputs, outputs, and parameters, of the simulation?
-PREFIX saref: <https://saref.etsi.org/core/>
+# What is the model executed by a simulation?
 PREFIX woso: <https://purl.org/woso#>
-SELECT ?p ?q WHERE {
-    ?s ?p ?q
-} VALUES ?p { saref:hasInput saref:hasOutput woso:hasParameter }
+SELECT ?m WHERE { $s woso:isExecutionOf ?m }

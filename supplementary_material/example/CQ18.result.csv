@@ -1,0 +1,4 @@
+v,d
+http://example.org/ScenarioA#CurrentTemperature,http://example.org/ScenarioA#Thermostat
+http://example.org/ScenarioA#DayTimeTemperatureSetPoint,http://example.org/ScenarioA#Thermostat
+http://example.org/ScenarioA#NightTimeTemperatureSetPoint,http://example.org/ScenarioA#Thermostat

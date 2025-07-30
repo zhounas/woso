@@ -1,4 +1,4 @@
-# What device made the execution of the simulations?
-PREFIX saref: <https://saref.etsi.org/core/>
+# What is the description of the model?
 PREFIX woso: <https://purl.org/woso#>
-SELECT * WHERE { ?d saref:madeExecution|^saref:madeBy ?s }
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?d WHERE { ?m a woso:SimulationModel; rdfs:comment ?d.}

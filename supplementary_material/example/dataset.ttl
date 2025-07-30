@@ -2,55 +2,117 @@
 @prefix saref: <https://saref.etsi.org/core/> .
 @prefix woso: <https://purl.org/woso#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix sa: <http://example.org/ScenarioA#>.
 
-@base <https://example.org/> .
 
-<Office123> a saref:FeatureOfInterest ;
+sa:Office123 a saref:FeatureOfInterest ;
 	rdfs:label "Office 123"@en .
 
-<Thermostat> a saref:Device ;
+sa:Thermostat a saref:Device ;
+    saref:madeExecution sa:ThermalSimulation;
 	rdfs:label "Thermostat"@en .
 
-<CurrentTemperature> a woso:SimulationVariable ;
+sa:CurrentTemperature_observation a saref:Observation ;
+    saref:hasResult sa:thermostatCurrentTemperature ;
+    saref:hasTimestamp "2024-12-17T13:30:00+01:00"^^xsd:dateTime ;
+    saref:madeBy sa:Thermostat ;
+    saref:observes <sa:Office123#currentTemperature> .
+
+sa:DayTimeTemperatureSetPoint_observation a saref:Observation ;
+    saref:hasResult sa:thermostatDayTimeTemperatureSetPoint ;
+    saref:hasTimestamp "2024-12-17T13:30:00+01:00"^^xsd:dateTime ;
+    saref:madeBy sa:Thermostat ;
+    saref:observes <sa:Office123#dayTimeTemperatureSetPoint> .
+
+sa:NightTimeTemperatureSetPoint_observation a saref:Observation ;
+    saref:hasResult sa:thermostatNightTimeTemperatureSetPoint ;
+    saref:hasTimestamp "2024-12-17T13:30:00+01:00"^^xsd:dateTime ;
+    saref:madeBy sa:Thermostat ;
+    saref:observes <sa:Office123#nightTimeTemperatureSetPoint> .
+
+sa:thermostatCurrentTemperature a saref:PropertyValue ;
+    saref:hasValue "20.29"^^xsd:decimal ;
+    saref:isValueOfProperty <sa:Office123#currentTemperature> .
+
+sa:thermostatDayTimeTemperatureSetPoint a saref:PropertyValue ;
+    saref:hasValue "20.00"^^xsd:decimal ;
+    saref:isValueOfProperty <sa:Office123#dayTimeTemperatureSetPoint> .
+
+sa:thermostatNightTimeTemperatureSetPoint a saref:PropertyValue ;
+    saref:hasValue "19.00"^^xsd:decimal ;
+    saref:isValueOfProperty <sa:Office123#nightTimeTemperatureSetPoint> .
+	
+sa:CurrentTemperature a woso:SimulationVariable ;
+    woso:isRelatedToPropertyOfInterest <sa:Office123#currentTemperature>;
 	rdfs:label "Current Temperature"@en .
 
-<DayTimeTemperatureSetPoint> a woso:SimulationVariable ;
+sa:DayTimeTemperatureSetPoint a woso:SimulationVariable ;
+    woso:isRelatedToPropertyOfInterest <sa:Office123#dayTimeTemperatureSetPoint>;
 	rdfs:label "Day time Temperature Set Point"@en .
 
-<NightTimeTemperatureSetPoint> a woso:SimulationVariable ;
+sa:NightTimeTemperatureSetPoint a woso:SimulationVariable ;
+    woso:isRelatedToPropertyOfInterest <sa:Office123#nightTimeTemperatureSetPoint>;
 	rdfs:label "Night Time Temperature Set Point"@en .
 
-<HeaterState> a woso:SimulationVariable ;
+sa:HeaterState a woso:SimulationVariable ;
 	rdfs:label "Heater State"@en .
 				 
-<SimulationStep> a woso:SimulationVariable ;
+sa:SimulationSteps a woso:SimulationVariable ;
 	rdfs:label "Simulation Step"@en .
 
-<HeaterStatePrediction> a saref:Function ;
+sa:HeaterStatePrediction a saref:Function ;
 	rdfs:label "Heater State Prediction"@en .
 
-<HeatingControlPrediction> a woso:PredictionService ;
+sa:HeatingControlPrediction a woso:PredictionService ;
 	rdfs:label "Heating Control Prediction"@en .
 
-<ThermalModel> a woso:SimulationModel ;
+sa:ThermalModel a woso:SimulationModel ;
 	rdfs:label "Thermal Model"@en ;
-	woso:format "FMU" ;
-	woso:generationTool "OMEdit" ;
-	woso:generationDateAndTime "2024-02-20T12:00:00Z"^^xsd:dateTime ;
-	woso:isRelatedToProperty <Temperature> ;
-	woso:models <Office123> .
+	rdfs:comment "Thermal model of office123"^^xsd:string ;
+	woso:models sa:Office123 ;
+	woso:isRelatedToProperty sa:Temperature;
+	woso:format "FMU"^^xsd:string ;
+	woso:filePath "/home/user/Thermal_model.fmu"^^xsd:string ;
+	woso:generationTool "Modelica"^^xsd:string ;
+	woso:generationDateAndTime "2024-12-10T10:28:45+00:00"^^xsd:dateTime.
+	
+	
 
-<ThermalSimulation> a woso:Simulation ;
+sa:ThermalSimulation a woso:SimulationExecution ;
 	rdfs:label "Thermal Simulation"@en ;
-	woso:isExecutionOf <ThermalModel> ;
-	saref:hasInput <CurrentTemperature> ,
-		<DayTimeTemperatureSetPoint> ,
-		<NightTimeTemperatureSetPoint> ;
-	saref:hasOutput <HeaterState> ;
-	woso:hasParameter <SimulationStep> ;
-	saref:offers <PredictionService> ;
-	saref:hasFunction <HeaterStatePrediction> ;
-	saref:madeBy <Thermostat> ;
-	woso:hasExecutionStartTime "2024-02-20T12:01:00Z"^^xsd:dateTime ;
-    woso:hasExecutionEndTime "2024-02-20T12:02:00Z"^^xsd:dateTime ;
-    woso:hasExecutionDuration "PT1M"^^xsd:duration .
+	
+	woso:isExecutionOf sa:ThermalModel ;
+	saref:hasInput sa:CurrentTemperature ,
+		sa:DayTimeTemperatureSetPoint ,
+		sa:NightTimeTemperatureSetPoint ;
+	woso:hasOutput sa:HeaterState ;
+	woso:hasParameter sa:SimulationSteps ;
+	woso:offers sa:PredictionService ;
+	woso:hasFunction sa:HeaterStatePrediction ;
+	saref:madeBy sa:Thermostat;
+	woso:hasExecutionStartTime "2024-12-17T13:37:29+01:00"^^xsd:dateTime ;
+	woso:hasExecutionEndTime "2024-12-17T13:38:20+01:00"^^xsd:dateTime ;
+	woso:hasExecutionTime "P0DT0H0M51S"^^xsd:duration.
+	
+	
+
+sa:CurrentTemperature1  woso:isValueOfVariable sa:CurrentTemperature ;
+	woso:hasValue "20.29"^^xsd:decimal .
+ 
+ 
+sa:DayTimeTemperatureSetPoint1  woso:isValueOfVariable sa:DayTimeTemperatureSetPoint ;
+	woso:hasValue "20.00"^^xsd:decimal .
+ 
+ 
+sa:NightTimeTemperatureSetPoint1  woso:isValueOfVariable sa:NightTimeTemperatureSetPoint ;
+	woso:hasValue "19.00"^^xsd:decimal .
+ 
+ 
+sa:HeaterState1 woso:isValueOfVariable sa:HeaterState;
+	woso:hasValue "20.20"^^xsd:decimal;
+	woso:hasSimulationTime "200"^^xsd:double.
+	
+sa:HeaterState2 woso:isValueOfVariable sa:HeaterState;
+	woso:hasValue "20.21"^^xsd:decimal;
+	woso:hasSimulationTime "400"^^xsd:double.
+ 

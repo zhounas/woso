@@ -1,4 +1,8 @@
-# Which function the simulations accomplishes?
-PREFIX saref: <https://saref.etsi.org/core/>
+# What are the names of the simulation variables?
 PREFIX woso: <https://purl.org/woso#>
-SELECT * WHERE { ?s saref:hasFunction ?fn }
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?n 
+    WHERE { 
+        ?s a woso:SimulationVariable ;
+            rdfs:label ?n .
+    }

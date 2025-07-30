@@ -1,0 +1,5 @@
+# What are the inputs of the simulation?
+PREFIX saref: <https://saref.etsi.org/core/>
+SELECT ?i WHERE {
+  ?s saref:hasInput ?i .
+}

@@ -1,4 +1,7 @@
-# Which features of interest are represented by the simulation model execution?
-PREFIX saref: <https://saref.etsi.org/core/>
+# What tool was the simulation model generated with, and when?
 PREFIX woso: <https://purl.org/woso#>
-SELECT * WHERE { ?m woso:models ?f}
+SELECT ?gt ?gdt 
+    WHERE { 
+        ?m woso:generationTool ?gt .
+        ?m woso:generationDateAndTime ?gdt .
+    }

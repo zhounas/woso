@@ -1,0 +1,1033 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "https://saref.etsi.org/core", "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.w3.org/2000/01/rdf-schema", "https://purl.org/woso", "http://www.w3.org/2001/XMLSchema" ],
+    "title" : {
+      "en" : "Web of Simulations ontology."
+    },
+    "iri" : "https://purl.org/woso#",
+    "version" : "v0.2",
+    "author" : [ "http://w3id.org/people/az/me", "http://maxime-lefrancois.info/me#", "http://linkedin.com/in/zehor-thilleli-hounas/" ],
+    "description" : {
+      "en" : "The Web Of Simulations ontology (WoSO) is a high-level ontology that describes Building Performance Simulations and their interaction with IoT systems. WoSO extends the SAREF V3.2.1 reference IoT ontology to include simulations as a component of IoT systems."
+    },
+    "other" : {
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "https://creativecommons.org/licenses/by/4.0/",
+        "type" : "iri"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "http://linkedin.com/in/zehor-thilleli-hounas/",
+        "type" : "iri"
+      }, {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "http://w3id.org/people/az/me",
+        "type" : "iri"
+      }, {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "http://maxime-lefrancois.info/me#",
+        "type" : "iri"
+      } ],
+      "preferredNamespacePrefix" : [ {
+        "identifier" : "preferredNamespacePrefix",
+        "language" : "undefined",
+        "value" : "woso",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "v0.2",
+        "type" : "label"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "https://purl.org/woso#",
+        "type" : "label"
+      } ],
+      "issued" : [ {
+        "identifier" : "issued",
+        "language" : "undefined",
+        "value" : "2025-05-26",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "en",
+        "value" : "Web of Simulations ontology.",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "0",
+    "type" : "owl:Class"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "11",
+    "type" : "owl:Class"
+  }, {
+    "id" : "26",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "27",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "31",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "10",
+    "type" : "owl:Class"
+  }, {
+    "id" : "32",
+    "type" : "owl:Class"
+  }, {
+    "id" : "25",
+    "type" : "owl:Class"
+  }, {
+    "id" : "37",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "14",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "13",
+    "type" : "owl:Class"
+  }, {
+    "id" : "38",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "34",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "39",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "40",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "30",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "23",
+    "type" : "owl:Class"
+  }, {
+    "id" : "19",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "42",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "43",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "50",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "36",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "52",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "53",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "21",
+    "type" : "owl:Class"
+  }, {
+    "id" : "16",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "https://saref.etsi.org/core/PropertyOfInterest",
+    "baseIri" : "https://saref.etsi.org/core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PropertyOfInterest"
+    },
+    "attributes" : [ "external" ],
+    "id" : "0"
+  }, {
+    "iri" : "https://saref.etsi.org/core/Property",
+    "baseIri" : "https://saref.etsi.org/core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Property"
+    },
+    "attributes" : [ "external" ],
+    "id" : "5"
+  }, {
+    "iri" : "https://saref.etsi.org/core/Function",
+    "baseIri" : "https://saref.etsi.org/core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Function"
+    },
+    "subClasses" : [ "10" ],
+    "attributes" : [ "external" ],
+    "id" : "11"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "26",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "27",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "31",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "https://purl.org/woso#PredictionFunction",
+    "baseIri" : "https://purl.org/woso",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PredictionFunction",
+      "en" : "Prediction function"
+    },
+    "id" : "10",
+    "superClasses" : [ "11" ]
+  }, {
+    "iri" : "https://saref.etsi.org/core/UnitOfMeasure",
+    "baseIri" : "https://saref.etsi.org/core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "UnitOfMeasure"
+    },
+    "attributes" : [ "external" ],
+    "id" : "32"
+  }, {
+    "iri" : "https://saref.etsi.org/core/ProcedureExecution",
+    "baseIri" : "https://saref.etsi.org/core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ProcedureExecution"
+    },
+    "subClasses" : [ "4" ],
+    "attributes" : [ "external" ],
+    "id" : "25"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "37",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "14",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://purl.org/woso#SimulationModel",
+    "baseIri" : "https://purl.org/woso",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SimulationModel",
+      "en" : "Simulation model"
+    },
+    "comment" : {
+      "en" : "Use of a data processing system to represent selected behavioral characteristics of a physical or abstract system (source: ISO/IEC 2382-1:1993(en), 01.06.01)"
+    },
+    "id" : "13"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#double",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "38",
+    "label" : {
+      "IRI-based" : "double"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "34",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "39",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "40",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#duration",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "30",
+    "label" : {
+      "IRI-based" : "duration"
+    }
+  }, {
+    "iri" : "https://saref.etsi.org/core/Service",
+    "baseIri" : "https://saref.etsi.org/core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Service"
+    },
+    "subClasses" : [ "7" ],
+    "attributes" : [ "external" ],
+    "id" : "23"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "19",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "42",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "43",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "https://purl.org/woso#PredictionService",
+    "baseIri" : "https://purl.org/woso",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PredictionService",
+      "en" : "Prediction service"
+    },
+    "id" : "7",
+    "superClasses" : [ "23" ]
+  }, {
+    "iri" : "https://purl.org/woso#SimulationExecution",
+    "baseIri" : "https://purl.org/woso",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SimulationExecution",
+      "en" : "Simulation execution"
+    },
+    "comment" : {
+      "en" : "Calculation method that describes a system or process related to a physical or abstract system (adapted from ISO 13943:2023(en), 3.160)"
+    },
+    "id" : "4",
+    "superClasses" : [ "25" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "50",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "36",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "52",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "53",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://saref.etsi.org/core/FeatureOfInterest",
+    "baseIri" : "https://saref.etsi.org/core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "FeatureOfInterest"
+    },
+    "attributes" : [ "external" ],
+    "id" : "21"
+  }, {
+    "iri" : "https://purl.org/woso#SimulationVariableValue",
+    "baseIri" : "https://purl.org/woso",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SimulationVariableValue",
+      "en" : "Simulation variable value"
+    },
+    "comment" : {
+      "en" : "Value of a simulation variable."
+    },
+    "id" : "16"
+  }, {
+    "iri" : "https://purl.org/woso#SimulationVariable",
+    "baseIri" : "https://purl.org/woso",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SimulationVariable",
+      "en" : "Simulation variable"
+    },
+    "comment" : {
+      "en" : "Simulations use variables to exchange information. Variables may be scalar or multi-dimensional arrays."
+    },
+    "id" : "2"
+  } ],
+  "property" : [ {
+    "id" : "1",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "3",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "6",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "9",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "12",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "15",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "18",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "20",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "22",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "24",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "28",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "29",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "33",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "35",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "41",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "44",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "45",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "46",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "47",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "48",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "49",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "51",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "54",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "55",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "56",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "57",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "17",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "58",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "59",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "60",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "61",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "62",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "63",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "64",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "65",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "8",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "66",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "67",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "68",
+    "type" : "owl:objectProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "https://purl.org/woso#isRelatedToPropertyOfInterest",
+    "baseIri" : "https://purl.org/woso",
+    "range" : "0",
+    "label" : {
+      "IRI-based" : "isRelatedToPropertyOfInterest",
+      "en" : "is related to property of interest"
+    },
+    "domain" : "2",
+    "comment" : {
+      "en" : "A relationship identifying the property of interest of a simulation variable."
+    },
+    "attributes" : [ "object" ],
+    "id" : "1"
+  }, {
+    "iri" : "https://purl.org/woso#hasParameter",
+    "baseIri" : "https://purl.org/woso",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "hasParameter",
+      "en" : "has parameter"
+    },
+    "domain" : "4",
+    "comment" : {
+      "en" : "Links a simulation execution to one of its parameters."
+    },
+    "attributes" : [ "object" ],
+    "id" : "3"
+  }, {
+    "iri" : "https://purl.org/woso#isOfferedBy",
+    "inverse" : "8",
+    "baseIri" : "https://purl.org/woso",
+    "range" : "4",
+    "label" : {
+      "IRI-based" : "isOfferedBy",
+      "en" : "is offered by"
+    },
+    "domain" : "7",
+    "comment" : {
+      "en" : "Links a service to the simulation execution providing it."
+    },
+    "attributes" : [ "object" ],
+    "id" : "6"
+  }, {
+    "iri" : "https://purl.org/woso#hasFunction",
+    "baseIri" : "https://purl.org/woso",
+    "range" : "10",
+    "label" : {
+      "IRI-based" : "hasFunction",
+      "en" : "hasFunction"
+    },
+    "domain" : "4",
+    "comment" : {
+      "en" : "Links a simulation execution to one of its functions."
+    },
+    "attributes" : [ "object" ],
+    "id" : "9"
+  }, {
+    "iri" : "https://purl.org/woso#hasOutputDescription",
+    "baseIri" : "https://purl.org/woso",
+    "range" : "14",
+    "label" : {
+      "IRI-based" : "hasOutputDescription",
+      "en" : "has output description"
+    },
+    "domain" : "13",
+    "attributes" : [ "datatype" ],
+    "id" : "12"
+  }, {
+    "iri" : "https://purl.org/woso#hasVariableValue",
+    "inverse" : "17",
+    "baseIri" : "https://purl.org/woso",
+    "range" : "16",
+    "label" : {
+      "IRI-based" : "hasVariableValue",
+      "en" : "has variable value"
+    },
+    "domain" : "2",
+    "comment" : {
+      "en" : "A relationship identifying the value of a simulation variable."
+    },
+    "attributes" : [ "object" ],
+    "id" : "15"
+  }, {
+    "iri" : "https://purl.org/woso#formatVersion",
+    "baseIri" : "https://purl.org/woso",
+    "range" : "19",
+    "label" : {
+      "IRI-based" : "formatVersion",
+      "en" : "format version"
+    },
+    "domain" : "13",
+    "comment" : {
+      "en" : "The format version of the simulation [for example 3.0]."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "18"
+  }, {
+    "iri" : "https://purl.org/woso#isModeledBy",
+    "baseIri" : "https://purl.org/woso",
+    "range" : "13",
+    "label" : {
+      "IRI-based" : "isModeledBy",
+      "en" : "is modeled by"
+    },
+    "domain" : "21",
+    "comment" : {
+      "en" : "Links a feature of interest to the simulation model that models it."
+    },
+    "attributes" : [ "object" ],
+    "id" : "20"
+  }, {
+    "range" : "23",
+    "domain" : "7",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "22"
+  }, {
+    "range" : "25",
+    "domain" : "4",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "24"
+  }, {
+    "range" : "11",
+    "domain" : "10",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "28"
+  }, {
+    "iri" : "https://purl.org/woso#hasExecutionTime",
+    "baseIri" : "https://purl.org/woso",
+    "range" : "30",
+    "label" : {
+      "IRI-based" : "hasExecutionTime",
+      "en" : "has execution time"
+    },
+    "domain" : "4",
+    "attributes" : [ "datatype" ],
+    "id" : "29"
+  }, {
+    "iri" : "https://purl.org/woso#hasExecutionStartTime",
+    "baseIri" : "https://purl.org/woso",
+    "range" : "34",
+    "label" : {
+      "IRI-based" : "hasExecutionStartTime",
+      "en" : "has execution start time"
+    },
+    "domain" : "4",
+    "attributes" : [ "datatype" ],
+    "id" : "33"
+  }, {
+    "iri" : "https://purl.org/woso#copyright",
+    "baseIri" : "https://purl.org/woso",
+    "range" : "36",
+    "label" : {
+      "IRI-based" : "copyright",
+      "en" : "copyright"
+    },
+    "domain" : "13",
+    "comment" : {
+      "en" : "Optional information on the intellectual property copyright for this simulation model [for example © My Company 2022]."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "35"
+  }, {
+    "iri" : "https://purl.org/woso#generationTool",
+    "baseIri" : "https://purl.org/woso",
+    "range" : "42",
+    "label" : {
+      "IRI-based" : "generationTool",
+      "en" : "generation tool"
+    },
+    "domain" : "13",
+    "comment" : {
+      "en" : "Optional name of the tool that generated the simulation model."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "41"
+  }, {
+    "iri" : "https://purl.org/woso#isExecutionOf",
+    "baseIri" : "https://purl.org/woso",
+    "range" : "13",
+    "label" : {
+      "IRI-based" : "isExecutionOf",
+      "en" : "is execution of"
+    },
+    "domain" : "4",
+    "comment" : {
+      "en" : "Links a simulation execution to its simulation model."
+    },
+    "attributes" : [ "object" ],
+    "id" : "44"
+  }, {
+    "iri" : "https://purl.org/woso#isExecutionOf",
+    "baseIri" : "https://purl.org/woso",
+    "range" : "13",
+    "label" : {
+      "IRI-based" : "isExecutionOf",
+      "en" : "is execution of"
+    },
+    "domain" : "4",
+    "comment" : {
+      "en" : "Links a simulation execution to its simulation model."
+    },
+    "attributes" : [ "object", "allValues" ],
+    "id" : "45"
+  }, {
+    "iri" : "https://purl.org/woso#hasOutput",
+    "baseIri" : "https://purl.org/woso",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "hasOutput",
+      "en" : "has output"
+    },
+    "domain" : "4",
+    "comment" : {
+      "en" : "Links a simulation execution to one of its outputs."
+    },
+    "attributes" : [ "object" ],
+    "id" : "46"
+  }, {
+    "iri" : "https://purl.org/woso#hasParameter",
+    "baseIri" : "https://purl.org/woso",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "hasParameter",
+      "en" : "has parameter"
+    },
+    "domain" : "4",
+    "comment" : {
+      "en" : "Links a simulation execution to one of its parameters."
+    },
+    "attributes" : [ "object", "allValues" ],
+    "id" : "47"
+  }, {
+    "iri" : "https://saref.etsi.org/core/hasInput",
+    "baseIri" : "https://saref.etsi.org/core",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "hasInput"
+    },
+    "domain" : "4",
+    "attributes" : [ "object", "external", "allValues" ],
+    "id" : "48"
+  }, {
+    "iri" : "https://purl.org/woso#hasOutput",
+    "baseIri" : "https://purl.org/woso",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "hasOutput",
+      "en" : "has output"
+    },
+    "domain" : "4",
+    "comment" : {
+      "en" : "Links a simulation execution to one of its outputs."
+    },
+    "attributes" : [ "object", "allValues" ],
+    "id" : "49"
+  }, {
+    "iri" : "https://purl.org/woso#generationDateAndTime",
+    "baseIri" : "https://purl.org/woso",
+    "range" : "43",
+    "label" : {
+      "IRI-based" : "generationDateAndTime",
+      "en" : "generation date and time"
+    },
+    "domain" : "13",
+    "comment" : {
+      "en" : "Optional date and time when the simulation model was generated."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "51"
+  }, {
+    "iri" : "https://purl.org/woso#models",
+    "inverse" : "20",
+    "baseIri" : "https://purl.org/woso",
+    "range" : "21",
+    "label" : {
+      "IRI-based" : "models",
+      "en" : "models"
+    },
+    "domain" : "13",
+    "comment" : {
+      "en" : "Links a simulation model to the feature of interest it models."
+    },
+    "attributes" : [ "object" ],
+    "id" : "54"
+  }, {
+    "iri" : "https://purl.org/woso#isRelatedToProperty",
+    "baseIri" : "https://purl.org/woso",
+    "range" : "5",
+    "label" : {
+      "IRI-based" : "isRelatedToProperty",
+      "en" : "is related to property"
+    },
+    "domain" : "13",
+    "attributes" : [ "object" ],
+    "id" : "55"
+  }, {
+    "iri" : "https://purl.org/woso#offers",
+    "baseIri" : "https://purl.org/woso",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "offers",
+      "en" : "offers"
+    },
+    "domain" : "4",
+    "comment" : {
+      "en" : "Links a simulation execution to one of the services it provides."
+    },
+    "attributes" : [ "object", "allValues" ],
+    "id" : "56"
+  }, {
+    "iri" : "https://purl.org/woso#hasFunction",
+    "baseIri" : "https://purl.org/woso",
+    "range" : "10",
+    "label" : {
+      "IRI-based" : "hasFunction",
+      "en" : "hasFunction"
+    },
+    "domain" : "4",
+    "comment" : {
+      "en" : "Links a simulation execution to one of its functions."
+    },
+    "attributes" : [ "object", "allValues" ],
+    "id" : "57"
+  }, {
+    "iri" : "https://purl.org/woso#isValueOfVariable",
+    "baseIri" : "https://purl.org/woso",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "isValueOfVariable",
+      "en" : "is value of variable"
+    },
+    "domain" : "16",
+    "comment" : {
+      "en" : "A relationship linking between a simulation variable value and its simulation variable."
+    },
+    "attributes" : [ "object" ],
+    "id" : "17"
+  }, {
+    "iri" : "https://purl.org/woso#hasParameterDescription",
+    "baseIri" : "https://purl.org/woso",
+    "range" : "37",
+    "label" : {
+      "IRI-based" : "hasParameterDescription",
+      "en" : "has parameter description"
+    },
+    "domain" : "13",
+    "attributes" : [ "datatype" ],
+    "id" : "58"
+  }, {
+    "iri" : "https://purl.org/woso#filePath",
+    "baseIri" : "https://purl.org/woso",
+    "range" : "52",
+    "label" : {
+      "IRI-based" : "filePath",
+      "en" : "file path"
+    },
+    "domain" : "13",
+    "comment" : {
+      "en" : "Optional file path of the simulation model."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "59"
+  }, {
+    "iri" : "https://purl.org/woso#license",
+    "baseIri" : "https://purl.org/woso",
+    "range" : "27",
+    "label" : {
+      "IRI-based" : "license",
+      "en" : "license"
+    },
+    "domain" : "13",
+    "comment" : {
+      "en" : "Optional information on the intellectual property licensing for this simulation model. [For example BSD license <license text or link to license>. If more space is required, the folder licenses should be used.]"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "60"
+  }, {
+    "iri" : "https://purl.org/woso#hasValue",
+    "baseIri" : "https://purl.org/woso",
+    "range" : "31",
+    "label" : {
+      "IRI-based" : "hasValue",
+      "en" : "has value"
+    },
+    "domain" : "16",
+    "comment" : {
+      "en" : "Value of a simulation variable expressed as an RDF literal."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "61"
+  }, {
+    "iri" : "https://purl.org/woso#hasSimulationTime",
+    "baseIri" : "https://purl.org/woso",
+    "range" : "38",
+    "label" : {
+      "IRI-based" : "hasSimulationTime",
+      "en" : "has simulation time"
+    },
+    "domain" : "16",
+    "comment" : {
+      "en" : "An optional value indicating the time elapsed within a simulation."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "62"
+  }, {
+    "iri" : "https://purl.org/woso#hasExecutionEndTime",
+    "baseIri" : "https://purl.org/woso",
+    "range" : "39",
+    "label" : {
+      "IRI-based" : "hasExecutionEndTime",
+      "en" : "has execution end time"
+    },
+    "domain" : "4",
+    "attributes" : [ "datatype" ],
+    "id" : "63"
+  }, {
+    "iri" : "https://purl.org/woso#author",
+    "baseIri" : "https://purl.org/woso",
+    "range" : "50",
+    "label" : {
+      "IRI-based" : "author",
+      "en" : "author"
+    },
+    "domain" : "13",
+    "comment" : {
+      "en" : "Optional string with the name of the model author."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "64"
+  }, {
+    "iri" : "https://purl.org/woso#format",
+    "baseIri" : "https://purl.org/woso",
+    "range" : "53",
+    "label" : {
+      "IRI-based" : "format",
+      "en" : "format"
+    },
+    "domain" : "13",
+    "comment" : {
+      "en" : "The format of the simulation [for example fmu]."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "65"
+  }, {
+    "iri" : "https://purl.org/woso#offers",
+    "baseIri" : "https://purl.org/woso",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "offers",
+      "en" : "offers"
+    },
+    "domain" : "4",
+    "comment" : {
+      "en" : "Links a simulation execution to one of the services it provides."
+    },
+    "attributes" : [ "object" ],
+    "id" : "8"
+  }, {
+    "iri" : "https://purl.org/woso#version",
+    "baseIri" : "https://purl.org/woso",
+    "range" : "26",
+    "label" : {
+      "IRI-based" : "version",
+      "en" : "version"
+    },
+    "domain" : "13",
+    "comment" : {
+      "en" : "Optional version of the simulation model [for example 1.0]."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "66"
+  }, {
+    "iri" : "https://purl.org/woso#hasInputDescription",
+    "baseIri" : "https://purl.org/woso",
+    "range" : "40",
+    "label" : {
+      "IRI-based" : "hasInputDescription",
+      "en" : "has input description"
+    },
+    "domain" : "13",
+    "attributes" : [ "datatype" ],
+    "id" : "67"
+  }, {
+    "iri" : "https://purl.org/woso#hasUnit",
+    "baseIri" : "https://purl.org/woso",
+    "range" : "32",
+    "label" : {
+      "IRI-based" : "hasUnit",
+      "en" : "has unit"
+    },
+    "domain" : "2",
+    "comment" : {
+      "en" : "A relationship identifying the unit of measure used for a simulation variable."
+    },
+    "attributes" : [ "object" ],
+    "id" : "68"
+  } ]
+}

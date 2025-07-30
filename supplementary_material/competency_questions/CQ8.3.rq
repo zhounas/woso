@@ -1,0 +1,5 @@
+# What are the parameters of the simulation?
+PREFIX woso: <https://purl.org/woso#>
+SELECT ?p WHERE {
+  ?s woso:hasParameter ?p .
+}

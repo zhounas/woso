@@ -1,0 +1,3 @@
+# Which is the function of the simulation?
+PREFIX woso: <https://purl.org/woso#>
+SELECT ?fn WHERE { ?s woso:hasFunction ?fn }

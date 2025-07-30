@@ -1,4 +1,3 @@
-# What is the format of the model?
-PREFIX saref: <https://saref.etsi.org/core/>
+# What is the file path of the models?
 PREFIX woso: <https://purl.org/woso#>
-SELECT * WHERE { $m woso:format ?f }
+SELECT ?fp WHERE { $m woso:filePath ?fp }

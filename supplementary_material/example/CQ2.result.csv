@@ -1,6 +1,2 @@
-p,q
-https://saref.etsi.org/core/hasInput,https://example.org/DayTimeTemperatureSetPoint
-https://saref.etsi.org/core/hasInput,https://example.org/NightTimeTemperatureSetPoint
-https://saref.etsi.org/core/hasInput,https://example.org/CurrentTemperature
-https://saref.etsi.org/core/hasOutput,https://example.org/HeaterState
-https://purl.org/woso#hasParameter,https://example.org/SimulationStep
+m
+http://example.org/ScenarioA#ThermalModel

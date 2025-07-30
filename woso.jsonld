@@ -2,10 +2,10 @@
   "@id" : "_:genid1",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "https://purl.org/woso#SimulationVariable"
+    "@id" : "https://purl.org/woso#PredictionFunction"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://saref.etsi.org/core/hasInput"
+    "@id" : "https://purl.org/woso#hasFunction"
   } ]
 }, {
   "@id" : "_:genid2",
@@ -14,7 +14,7 @@
     "@id" : "https://purl.org/woso#SimulationVariable"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://saref.etsi.org/core/hasOutput"
+    "@id" : "https://purl.org/woso#hasOutput"
   } ]
 }, {
   "@id" : "_:genid3",
@@ -23,7 +23,7 @@
     "@id" : "https://purl.org/woso#SimulationVariable"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://saref.etsi.org/core/hasParameter"
+    "@id" : "https://purl.org/woso#hasParameter"
   } ]
 }, {
   "@id" : "_:genid4",
@@ -32,8 +32,50 @@
     "@id" : "https://purl.org/woso#SimulationModel"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://saref.etsi.org/core/isExecutionOf"
+    "@id" : "https://purl.org/woso#isExecutionOf"
   } ]
+}, {
+  "@id" : "_:genid5",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://purl.org/woso#PredictionService"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://purl.org/woso#offers"
+  } ]
+}, {
+  "@id" : "_:genid6",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://purl.org/woso#SimulationVariable"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://saref.etsi.org/core/hasInput"
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/terms/creator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/issued",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/license",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/title",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2001/XMLSchema#date",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
 }, {
   "@id" : "http://www.w3.org/2001/XMLSchema#duration",
   "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
@@ -41,11 +83,11 @@
   "@id" : "https://purl.org/woso#",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
   "http://purl.org/dc/terms/creator" : [ {
+    "@id" : "http://linkedin.com/in/zehor-thilleli-hounas/"
+  }, {
     "@id" : "http://maxime-lefrancois.info/me#"
   }, {
     "@id" : "http://w3id.org/people/az/me"
-  }, {
-    "@id" : "https://www.linkedin.com/in/zehor-thilleli-hounas/"
   } ],
   "http://purl.org/dc/terms/description" : [ {
     "@language" : "en",
@@ -53,10 +95,10 @@
   } ],
   "http://purl.org/dc/terms/issued" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2024-02-02"
+    "@value" : "2025-05-26"
   } ],
   "http://purl.org/dc/terms/license" : [ {
-    "@id" : "https://creativecommons.org/licenses/by/3.0/"
+    "@id" : "https://creativecommons.org/licenses/by/4.0/"
   } ],
   "http://purl.org/dc/terms/title" : [ {
     "@language" : "en",
@@ -72,17 +114,17 @@
     "@id" : "https://labs.etsi.org/rep/saref/saref-core/-/raw/develop-v3.2.1/ontology/saref.ttl"
   } ],
   "http://www.w3.org/2002/07/owl#versionIRI" : [ {
-    "@id" : "https://purl.org/woso/0.1#"
+    "@id" : "https://purl.org/woso/0.2#"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
-    "@value" : "v0.1"
+    "@value" : "v0.2"
   } ]
 }, {
-  "@id" : "https://purl.org/woso#PredictingFunction",
+  "@id" : "https://purl.org/woso#PredictionFunction",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "predicting function"
+    "@value" : "Prediction function"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://saref.etsi.org/core/Function"
@@ -92,13 +134,13 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "prediction service"
+    "@value" : "Prediction service"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://saref.etsi.org/core/Service"
   } ]
 }, {
-  "@id" : "https://purl.org/woso#Simulation",
+  "@id" : "https://purl.org/woso#SimulationExecution",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -106,7 +148,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "simulation"
+    "@value" : "Simulation execution"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://saref.etsi.org/core/ProcedureExecution"
@@ -118,6 +160,10 @@
     "@id" : "_:genid3"
   }, {
     "@id" : "_:genid4"
+  }, {
+    "@id" : "_:genid5"
+  }, {
+    "@id" : "_:genid6"
   } ]
 }, {
   "@id" : "https://purl.org/woso#SimulationModel",
@@ -128,7 +174,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "simulation model"
+    "@value" : "Simulation model"
   } ]
 }, {
   "@id" : "https://purl.org/woso#SimulationVariable",
@@ -139,7 +185,18 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "simulation variable"
+    "@value" : "Simulation variable"
+  } ]
+}, {
+  "@id" : "https://purl.org/woso#SimulationVariableValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Value of a simulation variable."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Simulation variable value"
   } ]
 }, {
   "@id" : "https://purl.org/woso#author",
@@ -171,6 +228,23 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "copyright"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://purl.org/woso#filePath",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Optional file path of the simulation model."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://purl.org/woso#SimulationModel"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "file path"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -244,23 +318,10 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "https://purl.org/woso#hasExecutionDuration",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://purl.org/woso#Simulation"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "has execution duration"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#duration"
-  } ]
-}, {
   "@id" : "https://purl.org/woso#hasExecutionEndTime",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://purl.org/woso#Simulation"
+    "@id" : "https://purl.org/woso#SimulationExecution"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -273,7 +334,7 @@
   "@id" : "https://purl.org/woso#hasExecutionStartTime",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://purl.org/woso#Simulation"
+    "@id" : "https://purl.org/woso#SimulationExecution"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -281,6 +342,36 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ]
+}, {
+  "@id" : "https://purl.org/woso#hasExecutionTime",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://purl.org/woso#SimulationExecution"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has execution time"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#duration"
+  } ]
+}, {
+  "@id" : "https://purl.org/woso#hasFunction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Links a simulation execution to one of its functions."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://purl.org/woso#SimulationExecution"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "hasFunction"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://purl.org/woso#PredictionFunction"
   } ]
 }, {
   "@id" : "https://purl.org/woso#hasInputDescription",
@@ -294,6 +385,23 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://purl.org/woso#hasOutput",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Links a simulation execution to one of its outputs."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://purl.org/woso#SimulationExecution"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has output"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://purl.org/woso#SimulationVariable"
   } ]
 }, {
   "@id" : "https://purl.org/woso#hasOutputDescription",
@@ -313,10 +421,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Links a simulation to one of its parameters."
+    "@value" : "Links a simulation execution to one of its parameters."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://purl.org/woso#Simulation"
+    "@id" : "https://purl.org/woso#SimulationExecution"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -339,6 +447,23 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
+  "@id" : "https://purl.org/woso#hasSimulationTime",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An optional value indicating the time elapsed within a simulation."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://purl.org/woso#SimulationVariableValue"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has simulation time"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#double"
+  } ]
+}, {
   "@id" : "https://purl.org/woso#hasUnit",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -353,7 +478,7 @@
     "@value" : "has unit"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://saref.etsi.org/core/UnitOfMeasurement"
+    "@id" : "https://saref.etsi.org/core/UnitOfMeasure"
   } ]
 }, {
   "@id" : "https://purl.org/woso#hasValue",
@@ -363,11 +488,48 @@
     "@value" : "Value of a simulation variable expressed as an RDF literal."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://purl.org/woso#SimulationVariable"
+    "@id" : "https://purl.org/woso#SimulationVariableValue"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "has value"
+  } ]
+}, {
+  "@id" : "https://purl.org/woso#hasVariableValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A relationship identifying the value of a simulation variable."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://purl.org/woso#SimulationVariable"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has variable value"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://purl.org/woso#SimulationVariableValue"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://purl.org/woso#isValueOfVariable"
+  } ]
+}, {
+  "@id" : "https://purl.org/woso#isExecutionOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Links a simulation execution to its simulation model."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://purl.org/woso#SimulationExecution"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is execution of"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://purl.org/woso#SimulationModel"
   } ]
 }, {
   "@id" : "https://purl.org/woso#isModeledBy",
@@ -387,6 +549,26 @@
     "@id" : "https://purl.org/woso#SimulationModel"
   } ]
 }, {
+  "@id" : "https://purl.org/woso#isOfferedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Links a service to the simulation execution providing it."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://purl.org/woso#PredictionService"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is offered by"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://purl.org/woso#SimulationExecution"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://purl.org/woso#offers"
+  } ]
+}, {
   "@id" : "https://purl.org/woso#isRelatedToProperty",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -398,6 +580,40 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://saref.etsi.org/core/Property"
+  } ]
+}, {
+  "@id" : "https://purl.org/woso#isRelatedToPropertyOfInterest",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A relationship identifying the property of interest of a simulation variable."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://purl.org/woso#SimulationVariable"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is related to property of interest"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://saref.etsi.org/core/PropertyOfInterest"
+  } ]
+}, {
+  "@id" : "https://purl.org/woso#isValueOfVariable",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A relationship linking between a simulation variable value and its simulation variable."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://purl.org/woso#SimulationVariableValue"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is value of variable"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://purl.org/woso#SimulationVariable"
   } ]
 }, {
   "@id" : "https://purl.org/woso#license",
@@ -437,6 +653,23 @@
     "@id" : "https://purl.org/woso#isModeledBy"
   } ]
 }, {
+  "@id" : "https://purl.org/woso#offers",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Links a simulation execution to one of the services it provides."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://purl.org/woso#SimulationExecution"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "offers"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://purl.org/woso#PredictionService"
+  } ]
+}, {
   "@id" : "https://purl.org/woso#version",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -454,9 +687,27 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "https://saref.etsi.org/core/UnitOfMeasurement",
+  "@id" : "https://saref.etsi.org/core/FeatureOfInterest",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
-  "@id" : "https://saref.etsi.org/core/hasParameter",
+  "@id" : "https://saref.etsi.org/core/Function",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://saref.etsi.org/core/ProcedureExecution",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://saref.etsi.org/core/Property",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://saref.etsi.org/core/PropertyOfInterest",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://saref.etsi.org/core/Service",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://saref.etsi.org/core/UnitOfMeasure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://saref.etsi.org/core/hasInput",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
 } ]

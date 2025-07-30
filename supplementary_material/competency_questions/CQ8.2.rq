@@ -1,0 +1,5 @@
+# What are the outputs of the simulation?
+PREFIX woso: <https://purl.org/woso#>
+SELECT ?o WHERE {
+  ?s woso:hasOutput ?o .
+}

@@ -1,719 +1,884 @@
 <h2 id="crossreference" class="list">Cross-reference for Web of Simulations ontology. classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 This section provides details for each class and property defined by Web of Simulations ontology..
-<div xmlns:widoco="https://w3id.org/widoco/vocab#"
-     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-     id="classes">
-   <h3 id="classes-headline" class="list">Classes</h3>
-   <ul class="hlist">
-      <li>
-         <a href="#PredictingFunction" title="https://purl.org/woso#PredictingFunction">predicting function</a>
-      </li>
-      <li>
-         <a href="#PredictionService" title="https://purl.org/woso#PredictionService">prediction service</a>
-      </li>
-      <li>
-         <a href="#Simulation" title="https://purl.org/woso#Simulation">simulation</a>
-      </li>
-      <li>
-         <a href="#SimulationModel" title="https://purl.org/woso#SimulationModel">simulation model</a>
-      </li>
-      <li>
-         <a href="#SimulationVariable" title="https://purl.org/woso#SimulationVariable">simulation variable</a>
-      </li>
-   </ul>
-   <div class="entity" id="PredictingFunction">
-      <h3>predicting function<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://purl.org/woso#PredictingFunction</p>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="https://saref.etsi.org/core/Function"
-               target="_blank"
-               title="https://saref.etsi.org/core/Function">function</a>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="PredictionService">
-      <h3>prediction service<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://purl.org/woso#PredictionService</p>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="https://saref.etsi.org/core/Service"
-               target="_blank"
-               title="https://saref.etsi.org/core/Service">service</a>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="Simulation">
-      <h3>simulation<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://purl.org/woso#Simulation</p>
-      <div class="comment">
-         <span class="markdown">Calculation method that describes a system or process related to a physical or abstract system (adapted from ISO 13943:2023(en), 3.160)</span>
-      </div>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="https://saref.etsi.org/core/ProcedureExecution"
-               target="_blank"
-               title="https://saref.etsi.org/core/ProcedureExecution">procedure execution</a>
-         </dd>
-         <dt>is in domain of</dt>
-         <dd>
-            <a href="#hasExecutionDuration" title="https://purl.org/woso#hasExecutionDuration">has execution duration</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasExecutionEndTime" title="https://purl.org/woso#hasExecutionEndTime">has execution end time</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasExecutionStartTime" title="https://purl.org/woso#hasExecutionStartTime">has execution start time</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasParameter" title="https://purl.org/woso#hasParameter">has parameter</a>
-            <sup class="type-op" title="object property">op</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="SimulationModel">
-      <h3>simulation model<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://purl.org/woso#SimulationModel</p>
-      <div class="comment">
-         <span class="markdown">Use of a data processing system to represent selected behavioral characteristics of a physical or abstract system (source: ISO/IEC 2382-1:1993(en), 01.06.01)</span>
-      </div>
-      <dl class="description">
-         <dt>is in domain of</dt>
-         <dd>
-            <a href="#author" title="https://purl.org/woso#author">author</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#copyright" title="https://purl.org/woso#copyright">copyright</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#format" title="https://purl.org/woso#format">format</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#formatVersion" title="https://purl.org/woso#formatVersion">format version</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#generationDateAndTime" title="https://purl.org/woso#generationDateAndTime">generation date and time</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#generationTool" title="https://purl.org/woso#generationTool">generation tool</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasInputDescription" title="https://purl.org/woso#hasInputDescription">has input description</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasOutputDescription" title="https://purl.org/woso#hasOutputDescription">has output description</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasParameterDescription" title="https://purl.org/woso#hasParameterDescription">has parameter description</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#isRelatedToProperty" title="https://purl.org/woso#isRelatedToProperty">is related to property</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#license" title="https://purl.org/woso#license">license</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#models" title="https://purl.org/woso#models">models</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#version" title="https://purl.org/woso#version">version</a>
-            <sup class="type-dp" title="data property">dp</sup>
-         </dd>
-         <dt>is in range of</dt>
-         <dd>
-            <a href="#isModeledBy" title="https://purl.org/woso#isModeledBy">is modeled by</a>
-            <sup class="type-op" title="object property">op</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="SimulationVariable">
-      <h3>simulation variable<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://purl.org/woso#SimulationVariable</p>
-      <div class="comment">
-         <span class="markdown">Simulations use variables to exchange information. Variables may be scalar or multi-dimensional arrays.</span>
-      </div>
-      <dl class="description">
-         <dt>is in domain of</dt>
-         <dd>
-            <a href="#hasUnit" title="https://purl.org/woso#hasUnit">has unit</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#hasValue" title="https://purl.org/woso#hasValue">has value</a>
-            <sup class="type-dp" title="data property">dp</sup>
-         </dd>
-         <dt>is in range of</dt>
-         <dd>
-            <a href="#hasParameter" title="https://purl.org/woso#hasParameter">has parameter</a>
-            <sup class="type-op" title="object property">op</sup>
-         </dd>
-      </dl>
-   </div>
-</div><div xmlns:widoco="https://w3id.org/widoco/vocab#"
-     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-     id="objectproperties">
-   <h3 id="properties" class="list">Object Properties</h3>
-   <ul class="hlist">
-      <li>
-         <a href="#hasParameter" title="https://purl.org/woso#hasParameter">has parameter</a>
-      </li>
-      <li>
-         <a href="#hasUnit" title="https://purl.org/woso#hasUnit">has unit</a>
-      </li>
-      <li>
-         <a href="#isModeledBy" title="https://purl.org/woso#isModeledBy">is modeled by</a>
-      </li>
-      <li>
-         <a href="#isRelatedToProperty" title="https://purl.org/woso#isRelatedToProperty">is related to property</a>
-      </li>
-      <li>
-         <a href="#models" title="https://purl.org/woso#models">models</a>
-      </li>
-   </ul>
-   <div class="entity" id="hasParameter">
-      <h3>has parameter<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://purl.org/woso#hasParameter</p>
-      <div class="comment">
-         <span class="markdown">Links a simulation to one of its parameters.</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#Simulation" title="https://purl.org/woso#Simulation">simulation</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#SimulationVariable" title="https://purl.org/woso#SimulationVariable">simulation variable</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="hasUnit">
-      <h3>has unit<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://purl.org/woso#hasUnit</p>
-      <div class="comment">
-         <span class="markdown">A relationship identifying the unit of measure used for a simulation variable.</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#SimulationVariable" title="https://purl.org/woso#SimulationVariable">simulation variable</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="https://saref.etsi.org/core/UnitOfMeasurement"
-                  target="_blank"
-                  title="https://saref.etsi.org/core/UnitOfMeasurement">unit of measurement</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="isModeledBy">
-      <h3>is modeled by<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://purl.org/woso#isModeledBy</p>
-      <div class="comment">
-         <span class="markdown">Links a feature of interest to the simulation model that models it.</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="https://saref.etsi.org/core/FeatureOfInterest"
-                  target="_blank"
-                  title="https://saref.etsi.org/core/FeatureOfInterest">feature of interest</a>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#SimulationModel" title="https://purl.org/woso#SimulationModel">simulation model</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>is inverse of</dt>
-            <dd>
-               <a href="#models" title="https://purl.org/woso#models">models</a>
-               <sup class="type-op" title="object property">op</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="isRelatedToProperty">
-      <h3>is related to property<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://purl.org/woso#isRelatedToProperty</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#SimulationModel" title="https://purl.org/woso#SimulationModel">simulation model</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="https://saref.etsi.org/core/Property"
-                  target="_blank"
-                  title="https://saref.etsi.org/core/Property">property</a>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="models">
-      <h3>models<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://purl.org/woso#models</p>
-      <div class="comment">
-         <span class="markdown">Links a simulation model to the feature of interest it models.</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#SimulationModel" title="https://purl.org/woso#SimulationModel">simulation model</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="https://saref.etsi.org/core/FeatureOfInterest"
-                  target="_blank"
-                  title="https://saref.etsi.org/core/FeatureOfInterest">feature of interest</a>
-            </dd>
-            <dt>is inverse of</dt>
-            <dd>
-               <a href="#isModeledBy" title="https://purl.org/woso#isModeledBy">is modeled by</a>
-               <sup class="type-op" title="object property">op</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-</div><div xmlns:widoco="https://w3id.org/widoco/vocab#"
-     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-     id="dataproperties">
-   <h3 id="dataproperties-headline" class="list">Data Properties</h3>
-   <ul class="hlist">
-      <li>
-         <a href="#author" title="https://purl.org/woso#author">author</a>
-      </li>
-      <li>
-         <a href="#copyright" title="https://purl.org/woso#copyright">copyright</a>
-      </li>
-      <li>
-         <a href="#format" title="https://purl.org/woso#format">format</a>
-      </li>
-      <li>
-         <a href="#formatVersion" title="https://purl.org/woso#formatVersion">format version</a>
-      </li>
-      <li>
-         <a href="#generationDateAndTime" title="https://purl.org/woso#generationDateAndTime">generation date and time</a>
-      </li>
-      <li>
-         <a href="#generationTool" title="https://purl.org/woso#generationTool">generation tool</a>
-      </li>
-      <li>
-         <a href="#hasExecutionDuration" title="https://purl.org/woso#hasExecutionDuration">has execution duration</a>
-      </li>
-      <li>
-         <a href="#hasExecutionEndTime" title="https://purl.org/woso#hasExecutionEndTime">has execution end time</a>
-      </li>
-      <li>
-         <a href="#hasExecutionStartTime" title="https://purl.org/woso#hasExecutionStartTime">has execution start time</a>
-      </li>
-      <li>
-         <a href="#hasInputDescription" title="https://purl.org/woso#hasInputDescription">has input description</a>
-      </li>
-      <li>
-         <a href="#hasOutputDescription" title="https://purl.org/woso#hasOutputDescription">has output description</a>
-      </li>
-      <li>
-         <a href="#hasParameterDescription" title="https://purl.org/woso#hasParameterDescription">has parameter description</a>
-      </li>
-      <li>
-         <a href="#hasValue" title="https://purl.org/woso#hasValue">has value</a>
-      </li>
-      <li>
-         <a href="#license" title="https://purl.org/woso#license">license</a>
-      </li>
-      <li>
-         <a href="#version" title="https://purl.org/woso#version">version</a>
-      </li>
-   </ul>
-   <div class="entity" id="author">
-      <h3>author<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://purl.org/woso#author</p>
-      <div class="comment">
-         <span class="markdown">Optional string with the name of the model author.</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#SimulationModel" title="https://purl.org/woso#SimulationModel">simulation model</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="http://www.w3.org/2001/XMLSchema#string"
-                  target="_blank"
-                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="copyright">
-      <h3>copyright<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://purl.org/woso#copyright</p>
-      <div class="comment">
-         <span class="markdown">Optional information on the intellectual property copyright for this simulation model [for example © My Company 2022].</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#SimulationModel" title="https://purl.org/woso#SimulationModel">simulation model</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="http://www.w3.org/2001/XMLSchema#string"
-                  target="_blank"
-                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="format">
-      <h3>format<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://purl.org/woso#format</p>
-      <div class="comment">
-         <span class="markdown">The format of the simulation [for example fmu].</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#SimulationModel" title="https://purl.org/woso#SimulationModel">simulation model</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="http://www.w3.org/2001/XMLSchema#string"
-                  target="_blank"
-                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="formatVersion">
-      <h3>format version<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://purl.org/woso#formatVersion</p>
-      <div class="comment">
-         <span class="markdown">The format version of the simulation [for example 3.0].</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#SimulationModel" title="https://purl.org/woso#SimulationModel">simulation model</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="http://www.w3.org/2001/XMLSchema#string"
-                  target="_blank"
-                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="generationDateAndTime">
-      <h3>generation date and time<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://purl.org/woso#generationDateAndTime</p>
-      <div class="comment">
-         <span class="markdown">Optional date and time when the simulation model was generated.</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#SimulationModel" title="https://purl.org/woso#SimulationModel">simulation model</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="http://www.w3.org/2001/XMLSchema#dateTime"
-                  target="_blank"
-                  title="http://www.w3.org/2001/XMLSchema#dateTime">date time</a>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="generationTool">
-      <h3>generation tool<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://purl.org/woso#generationTool</p>
-      <div class="comment">
-         <span class="markdown">Optional name of the tool that generated the simulation model.</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#SimulationModel" title="https://purl.org/woso#SimulationModel">simulation model</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="http://www.w3.org/2001/XMLSchema#string"
-                  target="_blank"
-                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="hasExecutionDuration">
-      <h3>has execution duration<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://purl.org/woso#hasExecutionDuration</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#Simulation" title="https://purl.org/woso#Simulation">simulation</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="http://www.w3.org/2001/XMLSchema#duration"
-                  target="_blank"
-                  title="http://www.w3.org/2001/XMLSchema#duration">duration</a>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="hasExecutionEndTime">
-      <h3>has execution end time<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://purl.org/woso#hasExecutionEndTime</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#Simulation" title="https://purl.org/woso#Simulation">simulation</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="http://www.w3.org/2001/XMLSchema#dateTime"
-                  target="_blank"
-                  title="http://www.w3.org/2001/XMLSchema#dateTime">date time</a>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="hasExecutionStartTime">
-      <h3>has execution start time<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://purl.org/woso#hasExecutionStartTime</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#Simulation" title="https://purl.org/woso#Simulation">simulation</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="http://www.w3.org/2001/XMLSchema#dateTime"
-                  target="_blank"
-                  title="http://www.w3.org/2001/XMLSchema#dateTime">date time</a>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="hasInputDescription">
-      <h3>has input description<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://purl.org/woso#hasInputDescription</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#SimulationModel" title="https://purl.org/woso#SimulationModel">simulation model</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="http://www.w3.org/2001/XMLSchema#string"
-                  target="_blank"
-                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="hasOutputDescription">
-      <h3>has output description<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://purl.org/woso#hasOutputDescription</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#SimulationModel" title="https://purl.org/woso#SimulationModel">simulation model</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="http://www.w3.org/2001/XMLSchema#string"
-                  target="_blank"
-                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="hasParameterDescription">
-      <h3>has parameter description<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://purl.org/woso#hasParameterDescription</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#SimulationModel" title="https://purl.org/woso#SimulationModel">simulation model</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="http://www.w3.org/2001/XMLSchema#string"
-                  target="_blank"
-                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="hasValue">
-      <h3>has value<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://purl.org/woso#hasValue</p>
-      <div class="comment">
-         <span class="markdown">Value of a simulation variable expressed as an RDF literal.</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#SimulationVariable" title="https://purl.org/woso#SimulationVariable">simulation variable</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="license">
-      <h3>license<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://purl.org/woso#license</p>
-      <div class="comment">
-         <span class="markdown">Optional information on the intellectual property licensing for this simulation model. [For example BSD license &lt;license text or link to license&gt;. If more space is required, the folder licenses should be used.]</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#SimulationModel" title="https://purl.org/woso#SimulationModel">simulation model</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="http://www.w3.org/2001/XMLSchema#string"
-                  target="_blank"
-                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="version">
-      <h3>version<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://purl.org/woso#version</p>
-      <div class="comment">
-         <span class="markdown">Optional version of the simulation model [for example 1.0].</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#SimulationModel" title="https://purl.org/woso#SimulationModel">simulation model</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="http://www.w3.org/2001/XMLSchema#string"
-                  target="_blank"
-                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
-            </dd>
-         </dl>
-      </div>
-   </div>
+<div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+ <h3 id="classes-headline" class="list">Classes</h3>
+ <ul class="hlist">
+  <li><a href="#PredictionFunction" title="https://purl.org/woso#PredictionFunction">Prediction function</a></li>
+  <li><a href="#PredictionService" title="https://purl.org/woso#PredictionService">Prediction service</a></li>
+  <li><a href="#SimulationExecution" title="https://purl.org/woso#SimulationExecution">Simulation execution</a></li>
+  <li><a href="#SimulationModel" title="https://purl.org/woso#SimulationModel">Simulation model</a></li>
+  <li><a href="#SimulationVariable" title="https://purl.org/woso#SimulationVariable">Simulation variable</a></li>
+  <li><a href="#SimulationVariableValue" title="https://purl.org/woso#SimulationVariableValue">Simulation variable value</a></li>
+ </ul>
+ <div class="entity" id="PredictionFunction">
+  <h3>Prediction function<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://purl.org/woso#PredictionFunction</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="https://saref.etsi.org/core/Function" target="_blank" title="https://saref.etsi.org/core/Function">Function</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasFunction" title="https://purl.org/woso#hasFunction">hasFunction</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="PredictionService">
+  <h3>Prediction service<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://purl.org/woso#PredictionService</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="https://saref.etsi.org/core/Service" target="_blank" title="https://saref.etsi.org/core/Service">Service</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#isOfferedBy" title="https://purl.org/woso#isOfferedBy">is offered by</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#offers" title="https://purl.org/woso#offers">offers</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="SimulationExecution">
+  <h3>Simulation execution<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://purl.org/woso#SimulationExecution</p>
+  <div class="comment">
+   <span class="markdown">Calculation method that describes a system or process related to a physical or abstract system (adapted from ISO 13943:2023(en), 3.160)</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="https://saref.etsi.org/core/ProcedureExecution" target="_blank" title="https://saref.etsi.org/core/ProcedureExecution">Procedure Execution</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasExecutionEndTime" title="https://purl.org/woso#hasExecutionEndTime">has execution end time</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasExecutionStartTime" title="https://purl.org/woso#hasExecutionStartTime">has execution start time</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasExecutionTime" title="https://purl.org/woso#hasExecutionTime">has execution time</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasOutput" title="https://purl.org/woso#hasOutput">has output</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasParameter" title="https://purl.org/woso#hasParameter">has parameter</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasFunction" title="https://purl.org/woso#hasFunction">hasFunction</a> <sup class="type-op" title="object property">op</sup>, <a href="#isExecutionOf" title="https://purl.org/woso#isExecutionOf">is execution of</a> <sup class="type-op" title="object property">op</sup>, <a href="#offers" title="https://purl.org/woso#offers">offers</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#isOfferedBy" title="https://purl.org/woso#isOfferedBy">is offered by</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="SimulationModel">
+  <h3>Simulation model<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://purl.org/woso#SimulationModel</p>
+  <div class="comment">
+   <span class="markdown">Use of a data processing system to represent selected behavioral characteristics of a physical or abstract system (source: ISO/IEC 2382-1:1993(en), 01.06.01)</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#author" title="https://purl.org/woso#author">author</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#copyright" title="https://purl.org/woso#copyright">copyright</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#filePath" title="https://purl.org/woso#filePath">file path</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#format" title="https://purl.org/woso#format">format</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#formatVersion" title="https://purl.org/woso#formatVersion">format version</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#generationDateAndTime" title="https://purl.org/woso#generationDateAndTime">generation date and time</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#generationTool" title="https://purl.org/woso#generationTool">generation tool</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasInputDescription" title="https://purl.org/woso#hasInputDescription">has input description</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasOutputDescription" title="https://purl.org/woso#hasOutputDescription">has output description</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasParameterDescription" title="https://purl.org/woso#hasParameterDescription">has parameter description</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#isRelatedToProperty" title="https://purl.org/woso#isRelatedToProperty">is related to property</a> <sup class="type-op" title="object property">op</sup>, <a href="#license" title="https://purl.org/woso#license">license</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#models" title="https://purl.org/woso#models">models</a> <sup class="type-op" title="object property">op</sup>, <a href="#version" title="https://purl.org/woso#version">version</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#isExecutionOf" title="https://purl.org/woso#isExecutionOf">is execution of</a> <sup class="type-op" title="object property">op</sup>, <a href="#isModeledBy" title="https://purl.org/woso#isModeledBy">is modeled by</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="SimulationVariable">
+  <h3>Simulation variable<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://purl.org/woso#SimulationVariable</p>
+  <div class="comment">
+   <span class="markdown">Simulations use variables to exchange information. Variables may be scalar or multi-dimensional arrays.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasUnit" title="https://purl.org/woso#hasUnit">has unit</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasVariableValue" title="https://purl.org/woso#hasVariableValue">has variable value</a> <sup class="type-op" title="object property">op</sup>, <a href="#isRelatedToPropertyOfInterest" title="https://purl.org/woso#isRelatedToPropertyOfInterest">is related to property of interest</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasOutput" title="https://purl.org/woso#hasOutput">has output</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasParameter" title="https://purl.org/woso#hasParameter">has parameter</a> <sup class="type-op" title="object property">op</sup>, <a href="#isValueOfVariable" title="https://purl.org/woso#isValueOfVariable">is value of variable</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="SimulationVariableValue">
+  <h3>Simulation variable value<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://purl.org/woso#SimulationVariableValue</p>
+  <div class="comment">
+   <span class="markdown">Value of a simulation variable.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasSimulationTime" title="https://purl.org/woso#hasSimulationTime">has simulation time</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasValue" title="https://purl.org/woso#hasValue">has value</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#isValueOfVariable" title="https://purl.org/woso#isValueOfVariable">is value of variable</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasVariableValue" title="https://purl.org/woso#hasVariableValue">has variable value</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+ <h3 id="properties" class="list">Object Properties</h3>
+ <ul class="hlist">
+  <li><a href="#hasOutput" title="https://purl.org/woso#hasOutput">has output</a></li>
+  <li><a href="#hasParameter" title="https://purl.org/woso#hasParameter">has parameter</a></li>
+  <li><a href="#hasUnit" title="https://purl.org/woso#hasUnit">has unit</a></li>
+  <li><a href="#hasVariableValue" title="https://purl.org/woso#hasVariableValue">has variable value</a></li>
+  <li><a href="#hasFunction" title="https://purl.org/woso#hasFunction">hasFunction</a></li>
+  <li><a href="#isExecutionOf" title="https://purl.org/woso#isExecutionOf">is execution of</a></li>
+  <li><a href="#isModeledBy" title="https://purl.org/woso#isModeledBy">is modeled by</a></li>
+  <li><a href="#isOfferedBy" title="https://purl.org/woso#isOfferedBy">is offered by</a></li>
+  <li><a href="#isRelatedToProperty" title="https://purl.org/woso#isRelatedToProperty">is related to property</a></li>
+  <li><a href="#isRelatedToPropertyOfInterest" title="https://purl.org/woso#isRelatedToPropertyOfInterest">is related to property of interest</a></li>
+  <li><a href="#isValueOfVariable" title="https://purl.org/woso#isValueOfVariable">is value of variable</a></li>
+  <li><a href="#models" title="https://purl.org/woso#models">models</a></li>
+  <li><a href="#offers" title="https://purl.org/woso#offers">offers</a></li>
+ </ul>
+ <div class="entity" id="hasOutput">
+  <h3>has output<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://purl.org/woso#hasOutput</p>
+  <div class="comment">
+   <span class="markdown">Links a simulation execution to one of its outputs.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#SimulationExecution" title="https://purl.org/woso#SimulationExecution">Simulation execution</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#SimulationVariable" title="https://purl.org/woso#SimulationVariable">Simulation variable</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasParameter">
+  <h3>has parameter<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://purl.org/woso#hasParameter</p>
+  <div class="comment">
+   <span class="markdown">Links a simulation execution to one of its parameters.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#SimulationExecution" title="https://purl.org/woso#SimulationExecution">Simulation execution</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#SimulationVariable" title="https://purl.org/woso#SimulationVariable">Simulation variable</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasUnit">
+  <h3>has unit<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://purl.org/woso#hasUnit</p>
+  <div class="comment">
+   <span class="markdown">A relationship identifying the unit of measure used for a simulation variable.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#SimulationVariable" title="https://purl.org/woso#SimulationVariable">Simulation variable</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="https://saref.etsi.org/core/UnitOfMeasure" target="_blank" title="https://saref.etsi.org/core/UnitOfMeasure">Unit Of Measure</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasVariableValue">
+  <h3>has variable value<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://purl.org/woso#hasVariableValue</p>
+  <div class="comment">
+   <span class="markdown">A relationship identifying the value of a simulation variable.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#SimulationVariable" title="https://purl.org/woso#SimulationVariable">Simulation variable</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#SimulationVariableValue" title="https://purl.org/woso#SimulationVariableValue">Simulation variable value</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#isValueOfVariable" title="https://purl.org/woso#isValueOfVariable">is value of variable</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasFunction">
+  <h3>hasFunction<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://purl.org/woso#hasFunction</p>
+  <div class="comment">
+   <span class="markdown">Links a simulation execution to one of its functions.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#SimulationExecution" title="https://purl.org/woso#SimulationExecution">Simulation execution</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#PredictionFunction" title="https://purl.org/woso#PredictionFunction">Prediction function</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="isExecutionOf">
+  <h3>is execution of<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://purl.org/woso#isExecutionOf</p>
+  <div class="comment">
+   <span class="markdown">Links a simulation execution to its simulation model.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#SimulationExecution" title="https://purl.org/woso#SimulationExecution">Simulation execution</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#SimulationModel" title="https://purl.org/woso#SimulationModel">Simulation model</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="isModeledBy">
+  <h3>is modeled by<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://purl.org/woso#isModeledBy</p>
+  <div class="comment">
+   <span class="markdown">Links a feature of interest to the simulation model that models it.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="https://saref.etsi.org/core/FeatureOfInterest" target="_blank" title="https://saref.etsi.org/core/FeatureOfInterest">Feature Of Interest</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#SimulationModel" title="https://purl.org/woso#SimulationModel">Simulation model</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#models" title="https://purl.org/woso#models">models</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="isOfferedBy">
+  <h3>is offered by<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://purl.org/woso#isOfferedBy</p>
+  <div class="comment">
+   <span class="markdown">Links a service to the simulation execution providing it.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#PredictionService" title="https://purl.org/woso#PredictionService">Prediction service</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#SimulationExecution" title="https://purl.org/woso#SimulationExecution">Simulation execution</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#offers" title="https://purl.org/woso#offers">offers</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="isRelatedToProperty">
+  <h3>is related to property<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://purl.org/woso#isRelatedToProperty</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#SimulationModel" title="https://purl.org/woso#SimulationModel">Simulation model</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="https://saref.etsi.org/core/Property" target="_blank" title="https://saref.etsi.org/core/Property">Property</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="isRelatedToPropertyOfInterest">
+  <h3>is related to property of interest<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://purl.org/woso#isRelatedToPropertyOfInterest</p>
+  <div class="comment">
+   <span class="markdown">A relationship identifying the property of interest of a simulation variable.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#SimulationVariable" title="https://purl.org/woso#SimulationVariable">Simulation variable</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="https://saref.etsi.org/core/PropertyOfInterest" target="_blank" title="https://saref.etsi.org/core/PropertyOfInterest">Property Of Interest</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="isValueOfVariable">
+  <h3>is value of variable<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://purl.org/woso#isValueOfVariable</p>
+  <div class="comment">
+   <span class="markdown">A relationship linking between a simulation variable value and its simulation variable.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#SimulationVariableValue" title="https://purl.org/woso#SimulationVariableValue">Simulation variable value</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#SimulationVariable" title="https://purl.org/woso#SimulationVariable">Simulation variable</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#hasVariableValue" title="https://purl.org/woso#hasVariableValue">has variable value</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="models">
+  <h3>models<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://purl.org/woso#models</p>
+  <div class="comment">
+   <span class="markdown">Links a simulation model to the feature of interest it models.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#SimulationModel" title="https://purl.org/woso#SimulationModel">Simulation model</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="https://saref.etsi.org/core/FeatureOfInterest" target="_blank" title="https://saref.etsi.org/core/FeatureOfInterest">Feature Of Interest</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#isModeledBy" title="https://purl.org/woso#isModeledBy">is modeled by</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="offers">
+  <h3>offers<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://purl.org/woso#offers</p>
+  <div class="comment">
+   <span class="markdown">Links a simulation execution to one of the services it provides.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#SimulationExecution" title="https://purl.org/woso#SimulationExecution">Simulation execution</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#PredictionService" title="https://purl.org/woso#PredictionService">Prediction service</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#isOfferedBy" title="https://purl.org/woso#isOfferedBy">is offered by</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
+ <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+ <ul class="hlist">
+  <li><a href="#author" title="https://purl.org/woso#author">author</a></li>
+  <li><a href="#copyright" title="https://purl.org/woso#copyright">copyright</a></li>
+  <li><a href="#filePath" title="https://purl.org/woso#filePath">file path</a></li>
+  <li><a href="#format" title="https://purl.org/woso#format">format</a></li>
+  <li><a href="#formatVersion" title="https://purl.org/woso#formatVersion">format version</a></li>
+  <li><a href="#generationDateAndTime" title="https://purl.org/woso#generationDateAndTime">generation date and time</a></li>
+  <li><a href="#generationTool" title="https://purl.org/woso#generationTool">generation tool</a></li>
+  <li><a href="#hasExecutionEndTime" title="https://purl.org/woso#hasExecutionEndTime">has execution end time</a></li>
+  <li><a href="#hasExecutionStartTime" title="https://purl.org/woso#hasExecutionStartTime">has execution start time</a></li>
+  <li><a href="#hasExecutionTime" title="https://purl.org/woso#hasExecutionTime">has execution time</a></li>
+  <li><a href="#hasInputDescription" title="https://purl.org/woso#hasInputDescription">has input description</a></li>
+  <li><a href="#hasOutputDescription" title="https://purl.org/woso#hasOutputDescription">has output description</a></li>
+  <li><a href="#hasParameterDescription" title="https://purl.org/woso#hasParameterDescription">has parameter description</a></li>
+  <li><a href="#hasSimulationTime" title="https://purl.org/woso#hasSimulationTime">has simulation time</a></li>
+  <li><a href="#hasValue" title="https://purl.org/woso#hasValue">has value</a></li>
+  <li><a href="#license" title="https://purl.org/woso#license">license</a></li>
+  <li><a href="#version" title="https://purl.org/woso#version">version</a></li>
+ </ul>
+ <div class="entity" id="author">
+  <h3>author<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://purl.org/woso#author</p>
+  <div class="comment">
+   <span class="markdown">Optional string with the name of the model author.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#SimulationModel" title="https://purl.org/woso#SimulationModel">Simulation model</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="copyright">
+  <h3>copyright<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://purl.org/woso#copyright</p>
+  <div class="comment">
+   <span class="markdown">Optional information on the intellectual property copyright for this simulation model [for example © My Company 2022].</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#SimulationModel" title="https://purl.org/woso#SimulationModel">Simulation model</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="filePath">
+  <h3>file path<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://purl.org/woso#filePath</p>
+  <div class="comment">
+   <span class="markdown">Optional file path of the simulation model.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#SimulationModel" title="https://purl.org/woso#SimulationModel">Simulation model</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="format">
+  <h3>format<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://purl.org/woso#format</p>
+  <div class="comment">
+   <span class="markdown">The format of the simulation [for example fmu].</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#SimulationModel" title="https://purl.org/woso#SimulationModel">Simulation model</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="formatVersion">
+  <h3>format version<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://purl.org/woso#formatVersion</p>
+  <div class="comment">
+   <span class="markdown">The format version of the simulation [for example 3.0].</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#SimulationModel" title="https://purl.org/woso#SimulationModel">Simulation model</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="generationDateAndTime">
+  <h3>generation date and time<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://purl.org/woso#generationDateAndTime</p>
+  <div class="comment">
+   <span class="markdown">Optional date and time when the simulation model was generated.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#SimulationModel" title="https://purl.org/woso#SimulationModel">Simulation model</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#dateTime" target="_blank" title="http://www.w3.org/2001/XMLSchema#dateTime">date Time</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="generationTool">
+  <h3>generation tool<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://purl.org/woso#generationTool</p>
+  <div class="comment">
+   <span class="markdown">Optional name of the tool that generated the simulation model.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#SimulationModel" title="https://purl.org/woso#SimulationModel">Simulation model</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasExecutionEndTime">
+  <h3>has execution end time<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://purl.org/woso#hasExecutionEndTime</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#SimulationExecution" title="https://purl.org/woso#SimulationExecution">Simulation execution</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#dateTime" target="_blank" title="http://www.w3.org/2001/XMLSchema#dateTime">date Time</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasExecutionStartTime">
+  <h3>has execution start time<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://purl.org/woso#hasExecutionStartTime</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#SimulationExecution" title="https://purl.org/woso#SimulationExecution">Simulation execution</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#dateTime" target="_blank" title="http://www.w3.org/2001/XMLSchema#dateTime">date Time</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasExecutionTime">
+  <h3>has execution time<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://purl.org/woso#hasExecutionTime</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#SimulationExecution" title="https://purl.org/woso#SimulationExecution">Simulation execution</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#duration" target="_blank" title="http://www.w3.org/2001/XMLSchema#duration">duration</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasInputDescription">
+  <h3>has input description<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://purl.org/woso#hasInputDescription</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#SimulationModel" title="https://purl.org/woso#SimulationModel">Simulation model</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasOutputDescription">
+  <h3>has output description<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://purl.org/woso#hasOutputDescription</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#SimulationModel" title="https://purl.org/woso#SimulationModel">Simulation model</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasParameterDescription">
+  <h3>has parameter description<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://purl.org/woso#hasParameterDescription</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#SimulationModel" title="https://purl.org/woso#SimulationModel">Simulation model</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasSimulationTime">
+  <h3>has simulation time<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://purl.org/woso#hasSimulationTime</p>
+  <div class="comment">
+   <span class="markdown">An optional value indicating the time elapsed within a simulation.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#SimulationVariableValue" title="https://purl.org/woso#SimulationVariableValue">Simulation variable value</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#double" target="_blank" title="http://www.w3.org/2001/XMLSchema#double">double</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasValue">
+  <h3>has value<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://purl.org/woso#hasValue</p>
+  <div class="comment">
+   <span class="markdown">Value of a simulation variable expressed as an RDF literal.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#SimulationVariableValue" title="https://purl.org/woso#SimulationVariableValue">Simulation variable value</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="license">
+  <h3>license<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://purl.org/woso#license</p>
+  <div class="comment">
+   <span class="markdown">Optional information on the intellectual property licensing for this simulation model. [For example BSD license &lt;license text or link to license&gt;. If more space is required, the folder licenses should be used.]</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#SimulationModel" title="https://purl.org/woso#SimulationModel">Simulation model</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="version">
+  <h3>version<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://purl.org/woso#version</p>
+  <div class="comment">
+   <span class="markdown">Optional version of the simulation model [for example 1.0].</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#SimulationModel" title="https://purl.org/woso#SimulationModel">Simulation model</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
 </div><div id="legend">
 <h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <div   class="entity">

@@ -1,4 +1,9 @@
-# Which services the simulations offers?
+# What are the values of the input simulation variables?
 PREFIX saref: <https://saref.etsi.org/core/>
 PREFIX woso: <https://purl.org/woso#>
-SELECT * WHERE { ?s saref:offers ?srv }
+SELECT ?sv ?value
+    WHERE {
+        ?s saref:hasInput ?sv .
+        ?svv woso:isValueOfVariable ?sv ;
+            woso:hasValue ?value .
+    }

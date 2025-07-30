@@ -1,0 +1,3 @@
+# What properties the simulation model is related to?
+PREFIX woso: <https://purl.org/woso#>
+SELECT ?pr WHERE { ?m woso:isRelatedToProperty ?pr }

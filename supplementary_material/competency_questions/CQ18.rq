@@ -1,0 +1,10 @@
+# What devices observe the properties related to the input simulation variables?
+PREFIX saref: <https://saref.etsi.org/core/>
+PREFIX woso: <https://purl.org/woso#>
+SELECT ?v ?d
+    WHERE { 
+        ?s saref:hasInput ?v .
+        ?v woso:isRelatedToPropertyOfInterest ?pr .
+        ?o saref:observes ?pr .
+        ?o saref:madeBy ?d .
+    } 

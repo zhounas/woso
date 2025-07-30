@@ -1,0 +1,3 @@
+# Which area is modeled by the simulation model?
+PREFIX woso: <https://purl.org/woso#>
+SELECT ?foi WHERE { ?m woso:models ?foi}

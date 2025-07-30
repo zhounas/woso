@@ -1,4 +1,3 @@
-# What is the model executed by the simulation?
-PREFIX saref: <https://saref.etsi.org/core/>
+# which simulations are executed? 
 PREFIX woso: <https://purl.org/woso#>
-SELECT * WHERE { $s woso:isExecutionOf ?m }
+SELECT ?s WHERE { ?s a woso:SimulationExecution }

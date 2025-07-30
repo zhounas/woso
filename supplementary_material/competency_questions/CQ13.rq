@@ -1,0 +1,3 @@
+# What device made the execution of the simulation?
+PREFIX saref: <https://saref.etsi.org/core/>
+SELECT ?d WHERE { ?d saref:madeExecution ?s } 
